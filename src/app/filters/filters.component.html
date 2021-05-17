@@ -1,0 +1,35 @@
+<h3 *ngIf="isCollapse">
+  <button
+    class="btn btn-primary p-1"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#filtersCollapse"
+    aria-controls="filtersCollapse"
+    (click)="toggleFilters.emit()">
+    Filters
+  </button>
+</h3>
+<div *ngIf="isCollapse; else elseTpl" [class.border]="isBordered" [class.border-secondary]="isBordered"
+     [class.show]="filters.misc.expanded.state === true" class="container py-2 mb-3 collapse">
+  <ng-container *ngTemplateOutlet="elseTpl"></ng-container>
+</div>
+
+<ng-template #elseTpl>
+  <div class="d-flex flex-wrap justify-content-end">
+
+    <div *ngFor="let group of filterOrder" [class.border]="isBordered" [class.border-secondary]="isBordered"
+         class="flex-column px-2 mx-1 mb-2">
+      <div *ngFor="let k of group.keys">
+        <ng-container *ngIf="filters[group.name][k].type == 0">
+          <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
+                 (ngModelChange)="saveFilters.emit()" id="{{k}}">
+          <label class="form-check-label align-middle m-0" for="{{k}}">{{filters[group.name][k].name}}</label>
+        </ng-container>
+        <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
+      </div>
+    </div>
+
+    <input *ngIf="isSearch" type="text" class="form-control bg-dark" [(ngModel)]="filters.misc.search.state"
+           placeholder="Search ..." (keyup.escape)="clearSearch()">
+  </div>
+</ng-template>

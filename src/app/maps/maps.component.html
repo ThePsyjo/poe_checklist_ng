@@ -1,0 +1,117 @@
+<div class="container p-2">
+  <div class="d-flex justify-content-between">
+    <div class="flex-column"><h2>Maps ({{version}})</h2></div>
+    <div class="flex-column">
+      <button type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
+              data-bs-target="#clearAll"></button>
+    </div>
+  </div>
+</div>
+
+<app-filters
+  [isCollapse]="true"
+  [isSearch]="true"
+  (saveFilters)="saveFilters()"
+  (toggleFilters)="toggleFilters()"
+  [filterOrder]="filter_order"
+  [filters]="filters"
+>
+</app-filters>
+<!--
+<h3>
+  <button
+    class="btn btn-primary p-1"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#filtersCollapse"
+    aria-controls="filtersCollapse"
+    (click)="toggleFilters()">
+    Filters
+  </button>
+</h3>
+<div class="container py-2 mb-3 border border-secondary collapse" [class.show]="filters.misc.expanded.state === true"
+     id="filtersCollapse">
+
+  <div class="d-flex flex-wrap justify-content-end">
+
+    <div *ngFor="let group of filter_order" class="flex-column px-2 mx-1 mb-2 border border-secondary">
+      <div *ngFor="let k of group.keys">
+        <ng-container *ngIf="filters[group.name][k].type == 0">
+          <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
+                 (ngModelChange)="saveFilters()" id="{{k}}">
+          <label class="form-check-label align-middle m-0" for="{{k}}">{{filters[group.name][k].name}}</label>
+        </ng-container>
+        <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
+      </div>
+    </div>
+
+    <input type="text" class="form-control bg-dark" [(ngModel)]="search" placeholder="Search map name ..."
+           (keyup.escape)="clearSearch()">
+  </div>
+</div>
+-->
+
+<div class="modal fade" id="clearAll" tabindex="-1" role="dialog" aria-labelledby="clearAllModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="clearAllModal">Clear</h5>
+      </div>
+      <div class="modal-body">
+        Clear all check marks? This can not be undone!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clear('all')">Clear</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table matSort (matSortChange)="sortData($event)" matSortActive="tier"
+       class="table text-primary table-hover border-secondary">
+  <thead>
+  <tr>
+    <th mat-sort-header="name" scope="col">Name</th>
+    <th mat-sort-header="tier" scope="col">Tier</th>
+    <th mat-sort-header="region" scope="col">Region</th>
+    <th class="text-center" scope="col" data-toggle="tooltip" data-placement="top" title="Completed">
+      C
+    </th>
+    <th class="text-center" scope="col" data-toggle="tooltip" data-placement="top" title="Bonus objective completed">
+      B
+    </th>
+    <th class="text-center" scope="col" data-toggle="tooltip" data-placement="top" title="Atlas objective completed">
+      A
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let map of model">
+    <ng-container *ngIf="isVisible(map)">
+      <tr [class]="colorClass(map)">
+        <td (click)="onRowClick(map)" [class]="colorClass(map, true)">{{map.name}}</td>
+        <td (click)="onRowClick(map)">{{map.tier}}</td>
+        <td (click)="onRowClick(map)">{{map.region}}</td>
+        <td (click)="onTdClick(map, 'c')">
+          <div class="text-center">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="map.c" (ngModelChange)="saveModel()"/>
+          </div>
+        </td>
+        <td (click)="onTdClick(map, 'b')">
+          <div class="text-center">
+            <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.b"
+                   (ngModelChange)="saveModel()"/>
+          </div>
+        </td>
+        <td (click)="onTdClick(map, 'a')">
+          <div class="text-center">
+            <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.a"
+                   (ngModelChange)="saveModel()"/>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+  </ng-container>
+  </tbody>
+</table>
