@@ -33,7 +33,6 @@ export class FiltersComponent implements OnInit {
   @Input() isSearch: boolean = false;
   @Input() isBordered: boolean = true;
   @Input() filterOrder: Record<string, any>[] = [];
-  @Input() search: string = '';
   @Input() filters: FiltersBase = {misc: {
     'expanded': {name: undefined, type: undefined, state: false},
     'search': {name: undefined, type: undefined, state: ''}
@@ -48,6 +47,6 @@ export class FiltersComponent implements OnInit {
   }
 
   clearSearch() {
-    this.search = ''
+    this.filters.misc.search.state = ''
   }
 }
