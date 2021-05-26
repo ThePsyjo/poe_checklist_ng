@@ -1,13 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import * as MAPS from '../../assets/json/MAPS.json';
+import MAPS from '../../assets/json/MAPS.json';
 import {Sort} from '@angular/material/sort';
-import {
-  FilterItem,
-  FilterItemType,
-  FiltersBase,
-  StoreFilterItem,
-  StoreFiltersBase
-} from "../filters/filters.component";
+import {FilterItem, FilterItemType, FiltersBase, StoreFilterItem, StoreFiltersBase} from "../filters/filters.component";
 
 export interface MapObject extends Record<string, any> {
   id: string;
@@ -27,17 +21,13 @@ export interface StoreFilters extends StoreFiltersBase {
   hide_misc: Record<string, StoreFilterItem>;
   hide_region: Record<string, StoreFilterItem>;
 }
+
 export interface Filters extends FiltersBase {
   show_checked: Record<string, FilterItem>;
   hide_checked: Record<string, FilterItem>;
   hide_misc: Record<string, FilterItem>;
   hide_region: Record<string, FilterItem>;
 }
-
-// export interface FilterOrder{
-//   string, string[]
-// }
-
 
 @Component({
   selector: 'maps',
@@ -89,11 +79,11 @@ export class MapsComponent implements OnInit {
     {name: 'show_checked', keys: ['show_c', 'show_b', 'show_a']},
   ];
   private to_store: StoreFilters = {
-      show_checked: {},
-      hide_checked: {},
-      hide_misc: {},
-      hide_region: {},
-      misc: {}
+    show_checked: {},
+    hide_checked: {},
+    hide_misc: {},
+    hide_region: {},
+    misc: {}
   };
 
   constructor() {
@@ -263,7 +253,6 @@ export class MapsComponent implements OnInit {
   }
 
 }
-
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {
   return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
