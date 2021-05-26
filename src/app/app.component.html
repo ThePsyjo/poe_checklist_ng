@@ -1,6 +1,6 @@
 <nav class="navbar navbar-dark bg-dark-trans-50 navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">PoE Checklist NG</a>
+    <a class="navbar-brand" href="/">PoE Checklist NG</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
             aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,34 +8,47 @@
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Maps</a>
+          <a class="nav-link active" href="/">Maps</a>
         </li>
         <li class="nav-item">
-          <!--suppress HtmlUnknownTarget -->
           <a class="nav-link disabled" routerLink="passives" routerLinkActive="active">Passive Quests</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled"  routerLink="pantheons" routerLinkActive="active">Pantheons</a>
+          <a class="nav-link disabled" routerLink="pantheons" routerLinkActive="active">Pantheons</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="trials" routerLinkActive="active">Trials</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="about" href='/#/about' routerLinkActive="active">About</a>
+          <a class="nav-link" routerLink="about" href='about' routerLinkActive="active">About</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!--<div class="container overflow-auto max-content-height bg-dark-trans-10 mt-4 p-3 mb-2 rounded">-->
-<div class="container bg-dark-trans-10 mt-4 p-3 mb-2 rounded">
+<div *ngIf="ga.client" class="container d-grid bg-dark-trans-50 text-center mt-4 p-1 rounded-2">
+  <div class="p-2" style="z-index: 0;grid-area: 1/1;">Please consider supporting us by disabling AdBlock.</div>
+  <div style="z-index: 1; grid-area: 1/1;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block"
+         [attr.data-ad-client]="ga.client"
+         [attr.data-ad-slot]="ga.slot"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+</div>
+
+<div class="container bg-dark-trans-10 mt-4 p-3 mb-2 rounded-2">
   <router-outlet></router-outlet>
 </div>
 
-<!--<div class="fixed-bottom text-secondary small p-2">-->
 <div class="fixed-bottom text-secondary small p-2">
-<footer>
-  © 2021 Copyright: ThePsyjo
-</footer>
+  <footer>
+    © 2021 Copyright: ThePsyjo
+  </footer>
 </div>
