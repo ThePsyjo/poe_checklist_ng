@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import MAPS from '../../assets/json/MAPS.json';
 import {Sort} from '@angular/material/sort';
-import {FilterItem, FilterItemType, FiltersBase, StoreFilterItem, StoreFiltersBase} from "../filters/filters.component";
+import {FilterItem, FilterItemType, FiltersBase} from "../filters/filters.component";
+import {compare} from "../common";
 
 export interface MapObject extends Record<string, any> {
   id: string;
@@ -13,13 +14,6 @@ export interface MapObject extends Record<string, any> {
   c: boolean;
   b: boolean;
   a: boolean;
-}
-
-export interface StoreFilters extends StoreFiltersBase {
-  show_checked: Record<string, StoreFilterItem>;
-  hide_checked: Record<string, StoreFilterItem>;
-  hide_misc: Record<string, StoreFilterItem>;
-  hide_region: Record<string, StoreFilterItem>;
 }
 
 export interface Filters extends FiltersBase {
@@ -36,7 +30,6 @@ export interface Filters extends FiltersBase {
 })
 export class MapsComponent implements OnInit {
   model: MapObject[] = [];
-  // filters: Record<string, boolean|false> = {}
   filters: Filters = {
     show_checked: {
       'show_c': {name: 'Show unchecked C', type: FilterItemType.Checkbox, state: false},
@@ -78,31 +71,12 @@ export class MapsComponent implements OnInit {
     {name: 'hide_checked', keys: ['hide_c', 'hide_b', 'hide_a']},
     {name: 'show_checked', keys: ['show_c', 'show_b', 'show_a']},
   ];
-  private to_store: StoreFilters = {
-    show_checked: {},
-    hide_checked: {},
-    hide_misc: {},
-    hide_region: {},
-    misc: {}
-  };
 
   constructor() {
   }
 
   ngOnInit(): void {
-    // console.log(this.version)
     this.initModel();
-    // delete localStorage.map_filter
-    // this.filters = JSON.parse(localStorage.getItem('map_filter') ?? '{}') ?? {};
-    let filter_data: StoreFilters = JSON.parse(localStorage.getItem('map_filter') ?? '{}') ?? {}
-    Object.entries(filter_data).forEach(([gk, gv]) => {
-      Object.entries(gv).forEach(([ik, iv]) => {
-        if (this.filters[gk][ik])
-          this.filters[gk][ik].state = iv.state
-      });
-    });
-    // console.log(this.filters)
-    // console.log(this.model)
   }
 
   initModel(clear: boolean = false): void {
@@ -126,7 +100,6 @@ export class MapsComponent implements OnInit {
       }
     })
     this.saveModel()
-
   }
 
   sortData(sort: Sort) {
@@ -198,24 +171,6 @@ export class MapsComponent implements OnInit {
     })));
   }
 
-  toggleFilters() {
-    this.filters.misc.expanded.state = !this.filters.misc.expanded.state;
-    this.saveFilters();
-  }
-
-  saveFilters() {
-    // console.log(this.filters)
-    Object.entries(this.filters).forEach(([gk, gv]) => {
-      Object.entries(gv).forEach(([ik, iv]) => {
-        if ((typeof iv.state) == "boolean")
-          this.to_store[gk][ik] = {state: iv.state as boolean}
-      });
-    });
-
-    localStorage.map_filter = JSON.stringify(this.to_store);
-    // console.log(localStorage.map_filter)
-  }
-
   get filter_order(): Record<string, any>[] {
     return this._filter_order;
   }
@@ -252,8 +207,4 @@ export class MapsComponent implements OnInit {
     this.saveModel()
   }
 
-}
-
-function compare(a: number | string, b: number | string, isAsc: boolean) {
-  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
 }

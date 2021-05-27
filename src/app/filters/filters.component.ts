@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 export enum FilterItemType {
   Checkbox,
@@ -19,7 +19,7 @@ export interface StoreFilterItem extends Record<string, any> {
   state: boolean;
 }
 
-export interface StoreFiltersBase extends Record<string, Record<string, StoreFilterItem>> {
+export interface StoreFilters extends Record<string, Record<string, StoreFilterItem>> {
   misc: Record<string, StoreFilterItem>;
 }
 
@@ -32,18 +32,59 @@ export class FiltersComponent implements OnInit {
   @Input() isCollapse: boolean = false;
   @Input() isSearch: boolean = false;
   @Input() isBordered: boolean = true;
+  @Input() storageKey: string = '';
   @Input() filterOrder: Record<string, any>[] = [];
-  @Input() filters: FiltersBase = {misc: {
-    'expanded': {name: undefined, type: undefined, state: false},
-    'search': {name: undefined, type: undefined, state: ''}
-  }};
-  @Output() toggleFilters = new EventEmitter();
-  @Output() saveFilters = new EventEmitter();
+  @Input() filters: FiltersBase = {
+    misc: {
+      'expanded': {name: undefined, type: undefined, state: false},
+      'search': {name: undefined, type: undefined, state: ''}
+    }
+  };
+  private storeFilters: StoreFilters = {misc:{}}
 
   constructor() {
   }
 
   ngOnInit(): void {
+    if (this.storageKey === '') {
+      throw new Error('storageKey must not be empty')
+    }
+
+    Object.entries(this.filters).forEach(([gk, gv]) => {
+      this.storeFilters[gk] = {}
+      Object.entries(gv).forEach(([ik, iv]) => {
+        if ((typeof iv.state) == "boolean") {
+          this.storeFilters[gk][ik] = {state: false}
+        }
+      });
+    });
+
+    let filter_data: StoreFilters = JSON.parse(localStorage.getItem(`${this.storageKey}_filter`) ?? '{}') ?? {}
+    Object.entries(filter_data).forEach(([gk, gv]) => {
+      Object.entries(gv).forEach(([ik, iv]) => {
+        if (this.filters[gk][ik])
+          this.filters[gk][ik].state = iv.state
+      });
+    });
+  }
+
+  toggleFilters() {
+    this.filters.misc.expanded.state = !this.filters.misc.expanded.state;
+    this.saveFilters();
+  }
+
+  saveFilters() {
+    // console.log(this.filters)
+    Object.entries(this.filters).forEach(([gk, gv]) => {
+      Object.entries(gv).forEach(([ik, iv]) => {
+        if ((typeof iv.state) == "boolean") {
+          this.storeFilters[gk][ik] = {state: iv.state as boolean}
+        }
+      });
+    });
+
+    localStorage.setItem(`${this.storageKey}_filter`, JSON.stringify(this.storeFilters));
+    // console.log(localStorage.getItem(`${this.storageKey}_filter`))
   }
 
   clearSearch() {

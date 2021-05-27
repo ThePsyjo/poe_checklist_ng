@@ -9,47 +9,13 @@
 </div>
 
 <app-filters
+  storageKey="map"
   [isCollapse]="true"
   [isSearch]="true"
-  (saveFilters)="saveFilters()"
-  (toggleFilters)="toggleFilters()"
   [filterOrder]="filter_order"
   [filters]="filters"
 >
 </app-filters>
-<!--
-<h3>
-  <button
-    class="btn btn-primary p-1"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#filtersCollapse"
-    aria-controls="filtersCollapse"
-    (click)="toggleFilters()">
-    Filters
-  </button>
-</h3>
-<div class="container py-2 mb-3 border border-secondary collapse" [class.show]="filters.misc.expanded.state === true"
-     id="filtersCollapse">
-
-  <div class="d-flex flex-wrap justify-content-end">
-
-    <div *ngFor="let group of filter_order" class="flex-column px-2 mx-1 mb-2 border border-secondary">
-      <div *ngFor="let k of group.keys">
-        <ng-container *ngIf="filters[group.name][k].type == 0">
-          <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
-                 (ngModelChange)="saveFilters()" id="{{k}}">
-          <label class="form-check-label align-middle m-0" for="{{k}}">{{filters[group.name][k].name}}</label>
-        </ng-container>
-        <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
-      </div>
-    </div>
-
-    <input type="text" class="form-control bg-dark" [(ngModel)]="search" placeholder="Search map name ..."
-           (keyup.escape)="clearSearch()">
-  </div>
-</div>
--->
 
 <div class="modal fade" id="clearAll" tabindex="-1" role="dialog" aria-labelledby="clearAllModal" aria-hidden="true">
   <div class="modal-dialog" role="document">

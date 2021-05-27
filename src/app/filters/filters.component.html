@@ -5,7 +5,7 @@
     data-bs-toggle="collapse"
     data-bs-target="#filtersCollapse"
     aria-controls="filtersCollapse"
-    (click)="toggleFilters.emit()">
+    (click)="toggleFilters()">
     Filters
   </button>
 </h3>
@@ -22,7 +22,7 @@
       <div *ngFor="let k of group.keys">
         <ng-container *ngIf="filters[group.name][k].type == 0">
           <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
-                 (ngModelChange)="saveFilters.emit()" id="{{k}}">
+                 (ngModelChange)="saveFilters()" id="{{k}}">
           <label class="form-check-label align-middle m-0" for="{{k}}">{{filters[group.name][k].name}}</label>
         </ng-container>
         <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
