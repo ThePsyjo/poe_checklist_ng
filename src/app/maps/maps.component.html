@@ -59,21 +59,19 @@
         <td [class]="colorClass(map, true)">{{map.name}}</td>
         <td>{{map.tier}}</td>
         <td>{{map.region}}</td>
-        <td (click)="onTdClick(map, 'c');$event.stopPropagation()">
-          <div class="text-center">
-            <input class="form-check-input" type="checkbox" [(ngModel)]="map.c" (ngModelChange)="saveModel()"/>
+        <td>
+          <div class="text-center" (click)="onTdClick(map, 'c');$event.stopPropagation()">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="map.c"/>
           </div>
         </td>
-        <td (click)="onTdClick(map, 'b');$event.stopPropagation()">
-          <div class="text-center">
-            <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.b"
-                   (ngModelChange)="saveModel()"/>
+        <td>
+          <div class="text-center" *ngIf="map.isOnAtlas" (click)="onTdClick(map, 'b');$event.stopPropagation()">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="map.b"/>
           </div>
         </td>
-        <td (click)="onTdClick(map, 'a');$event.stopPropagation()">
-          <div class="text-center">
-            <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.a"
-                   (ngModelChange)="saveModel()"/>
+        <td>
+          <div class="text-center" *ngIf="map.isOnAtlas" (click)="onTdClick(map, 'a');$event.stopPropagation()">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="map.a"/>
           </div>
         </td>
       </tr>

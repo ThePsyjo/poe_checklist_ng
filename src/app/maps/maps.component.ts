@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import MAPS from '../../assets/json/MAPS.json';
+import MAPS from './MAPS';
 import {Sort} from '@angular/material/sort';
 import {FilterItem, FilterItemType, FiltersBase} from "../filters/filters.component";
 import {compare} from "../common";
@@ -7,8 +7,8 @@ import {compare} from "../common";
 export interface MapObject extends Record<string, any> {
   id: string;
   name: string;
-  tier: number | undefined;
-  region: string | undefined;
+  tier?: number;
+  region?: string;
   isUnique: boolean;
   isOnAtlas: boolean;
   c: boolean;
@@ -81,25 +81,36 @@ export class MapsComponent implements OnInit {
 
   initModel(clear: boolean = false): void {
     // delete localStorage.map_checked
-    let checked: Map<string, { a: boolean, b: boolean, c: boolean }>
+    let checked: Record<string, Record<string, boolean>>
     if (clear) {
-      checked = new Map()
+      checked = {}
     } else {
-      checked = new Map(JSON.parse(localStorage.getItem('map_checked') ?? 'null'))
+      // workaround to preserve old format
+      if (localStorage.map_checked[0] == '[')
+        checked = Object.fromEntries(JSON.parse(localStorage.map_checked ?? '[]'))
+      else
+        checked = JSON.parse(localStorage.getItem('map_checked') ?? '{}')
     }
+    // console.log(localStorage.map_checked)
     // console.log(checked)
-    // @ts-ignore
-    this.model = MAPS.list.map(_map => {
+    this.model = MAPS.list.map(function (_map): MapObject {
       let id = _map.name.toLowerCase().replace(/[ -']/gi, '_')
       return {
         id: id,
-        c: checked?.get(id)?.c ?? false,
-        b: checked?.get(id)?.b ?? !_map.isOnAtlas,
-        a: checked?.get(id)?.a ?? !_map.isOnAtlas,
+        c: checked[id]?.c ?? false,
+        b: checked[id]?.b ?? !_map.isOnAtlas,
+        a: checked[id]?.a ?? !_map.isOnAtlas,
         ..._map
       }
     })
     this.saveModel()
+  }
+
+  saveModel() {
+    // console.log(this.model)
+    localStorage.map_checked = JSON.stringify(Object.fromEntries(this.model.map(item => {
+      return [item.id, {c: item.c, b: item.b, a: item.a}]
+    })));
   }
 
   sortData(sort: Sort) {
@@ -122,10 +133,6 @@ export class MapsComponent implements OnInit {
           return 0;
       }
     });
-  }
-
-  onTdClick(map: MapObject, key: string) {
-    map[key] = !map[key]
   }
 
   isVisible(map: MapObject) {
@@ -164,12 +171,6 @@ export class MapsComponent implements OnInit {
     }
   }
 
-  saveModel() {
-    // console.log(this.model)
-    localStorage.map_checked = JSON.stringify(Array.from(this.model.map(item => {
-      return [item.id, {c: item.c, b: item.b, a: item.a}]
-    })));
-  }
 
   get filter_order(): Record<string, any>[] {
     return this._filter_order;
@@ -184,6 +185,11 @@ export class MapsComponent implements OnInit {
 
   get version(): number {
     return MAPS.version;
+  }
+
+  onTdClick(map: MapObject, key: string) {
+    map[key] = !map[key]
+    this.saveModel()
   }
 
   onRowClick(map: MapObject) {
