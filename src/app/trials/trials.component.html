@@ -43,13 +43,13 @@
   <tbody>
   <ng-container *ngFor="let row of model">
     <ng-container *ngIf="isVisible(row)">
-      <tr [class.text-secondary]="row.checked">
-        <td (click)="onRowClick(row)">{{row.act}}</td>
-        <td (click)="onRowClick(row)">{{row.zone}}</td>
-        <td (click)="onRowClick(row)">{{row.difficulty}}</td>
-        <td (click)="onTdClick(row)">
+      <tr [class.text-secondary]="row.checked" (click)="onRowClick(row)">
+        <td>{{row.act}}</td>
+        <td>{{row.zone}}</td>
+        <td>{{row.difficulty}}</td>
+        <td>
           <div class="text-center">
-            <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked" (ngModelChange)="saveModel()"/>
+            <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked"/>
           </div>
         </td>
       </tr>

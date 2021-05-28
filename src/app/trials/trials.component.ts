@@ -51,11 +51,11 @@ export class TrialsComponent implements OnInit {
 
   initModel(clear: boolean = false) {
     // delete localStorage.map_checked
-    let checked: Map<number, boolean>
+    let checked: Record<number, boolean>
     if (clear) {
-      checked = new Map()
+      checked = {}
     } else {
-      checked = new Map(JSON.parse(localStorage.getItem('trial_checked') ?? 'null'))
+      checked = JSON.parse(localStorage.getItem('trial_checked') ?? '{}')
     }
     // console.log(checked)
     // @ts-ignore
@@ -63,11 +63,11 @@ export class TrialsComponent implements OnInit {
       return {
         ...trial,
         act: trial.act ? `${trial.act}` : '-',
-        checked: checked.get(trial.id) ?? false,
+        checked: checked[trial.id] ?? false,
         zone_display: trial.location ? `${trial.zone} (${trial.location})` : trial.zone,
       }
     })
-    this.saveModel()
+    // this.saveModel()
   }
 
   sortData(sort: Sort) {
@@ -92,10 +92,6 @@ export class TrialsComponent implements OnInit {
     });
   }
 
-  onTdClick(trial: Trial) {
-    trial.checked = !trial.checked
-  }
-
   isVisible(trial: Trial) {
     // search
     return !(
@@ -108,7 +104,7 @@ export class TrialsComponent implements OnInit {
   }
 
   saveModel() {
-    localStorage.trial_checked = JSON.stringify(Array.from(this.model.map(item => {
+    localStorage.trial_checked = JSON.stringify(Object.fromEntries(this.model.map(item => {
       return [item.id, item.checked]
     })));
   }
