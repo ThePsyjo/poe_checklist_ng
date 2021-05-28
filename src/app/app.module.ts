@@ -10,7 +10,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AboutComponent} from './about/about.component';
 import {TrialsComponent} from './trials/trials.component';
 import {MatSortModule} from '@angular/material/sort';
-import { FiltersComponent } from './filters/filters.component';
+import {FiltersComponent} from './filters/filters.component';
+import {PassivesComponent} from './passives/passives.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FiltersComponent } from './filters/filters.component';
     AboutComponent,
     TrialsComponent,
     FiltersComponent,
+    PassivesComponent,
   ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'serverApp' }),
