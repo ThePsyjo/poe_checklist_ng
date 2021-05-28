@@ -86,7 +86,7 @@ export class MapsComponent implements OnInit {
       checked = {}
     } else {
       // workaround to preserve old format
-      if (localStorage.map_checked[0] == '[')
+      if ((localStorage.map_checked ?? '')[0] == '[')
         checked = Object.fromEntries(JSON.parse(localStorage.map_checked ?? '[]'))
       else
         checked = JSON.parse(localStorage.getItem('map_checked') ?? '{}')
