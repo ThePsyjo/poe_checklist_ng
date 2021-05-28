@@ -103,7 +103,6 @@ export class MapsComponent implements OnInit {
         ..._map
       }
     })
-    this.saveModel()
   }
 
   saveModel() {
@@ -171,7 +170,6 @@ export class MapsComponent implements OnInit {
     }
   }
 
-
   get filter_order(): Record<string, any>[] {
     return this._filter_order;
   }
@@ -181,6 +179,7 @@ export class MapsComponent implements OnInit {
     if (key == 'all') {
       this.initModel(true)
     }
+    this.saveModel()
   }
 
   get version(): number {

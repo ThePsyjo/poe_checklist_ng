@@ -67,7 +67,6 @@ export class TrialsComponent implements OnInit {
         zone_display: trial.location ? `${trial.zone} (${trial.location})` : trial.zone,
       }
     })
-    // this.saveModel()
   }
 
   sortData(sort: Sort) {
@@ -115,6 +114,7 @@ export class TrialsComponent implements OnInit {
 
   clear() {
     this.initModel(true)
+    this.saveModel()
   }
 
   onRowClick(trial: Trial) {
