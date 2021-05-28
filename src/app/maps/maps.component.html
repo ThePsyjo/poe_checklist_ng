@@ -55,22 +55,22 @@
   <tbody>
   <ng-container *ngFor="let map of model">
     <ng-container *ngIf="isVisible(map)">
-      <tr [class]="colorClass(map)">
-        <td (click)="onRowClick(map)" [class]="colorClass(map, true)">{{map.name}}</td>
-        <td (click)="onRowClick(map)">{{map.tier}}</td>
-        <td (click)="onRowClick(map)">{{map.region}}</td>
-        <td (click)="onTdClick(map, 'c')">
+      <tr [class]="colorClass(map)" (click)="onRowClick(map)">
+        <td [class]="colorClass(map, true)">{{map.name}}</td>
+        <td>{{map.tier}}</td>
+        <td>{{map.region}}</td>
+        <td (click)="onTdClick(map, 'c');$event.stopPropagation()">
           <div class="text-center">
             <input class="form-check-input" type="checkbox" [(ngModel)]="map.c" (ngModelChange)="saveModel()"/>
           </div>
         </td>
-        <td (click)="onTdClick(map, 'b')">
+        <td (click)="onTdClick(map, 'b');$event.stopPropagation()">
           <div class="text-center">
             <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.b"
                    (ngModelChange)="saveModel()"/>
           </div>
         </td>
-        <td (click)="onTdClick(map, 'a')">
+        <td (click)="onTdClick(map, 'a');$event.stopPropagation()">
           <div class="text-center">
             <input *ngIf="map.isOnAtlas" class="form-check-input" type="checkbox" [(ngModel)]="map.a"
                    (ngModelChange)="saveModel()"/>
