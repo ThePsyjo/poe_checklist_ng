@@ -35,8 +35,9 @@ $poe-checklist-ng-theme: mat-dark-theme((
 
 $theme-colors: (
   //"primary": #c0c0c0,
-  "primary": #dfcf99,
-  "secondary": #646445,
+  "primary_highlight": #dfcf99,
+  "primary": #9e926c,
+  "secondary": #44442f,
   "unique": rgb(175, 95, 28),
   "unique2": rgb(85, 46, 14),
   "dark-trans-10": rgba(0, 0, 0, 0.9),
@@ -103,6 +104,8 @@ input[type=checkbox]:focus {
   border-color: map-get($theme-colors, primary);
   box-shadow: none;
 }
+a{color: map-get($theme-colors, primary);}
+a:hover{color: map-get($theme-colors, primary_highlight);}
 //input[type=checkbox]:checked:after{
 //  color: map-get($theme-colors, primary);
 //  content: "\2714";
