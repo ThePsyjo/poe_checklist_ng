@@ -22,7 +22,7 @@ def update(data, name, tier, region):
 with open('MAPS-template.json') as _tpl, open('out.json', 'w') as _out:
     tpl = json.load(_tpl)
 
-    data = BeautifulSoup(urlopen('https://poedb.tw/us/area.php?cn=Map').read())
+    data = BeautifulSoup(urlopen('https://poedb.tw/us/area.php?cn=Map').read(), features='html.parser')
     for row in data.find_all('tr'):
         r = row.find_all('td')
         if not r:
