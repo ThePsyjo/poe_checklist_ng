@@ -1237,7 +1237,6 @@ export default {
     {
       "name": "Eye of the Storm",
       "tier": 17,
-      "region": null,
       "isUnique": true,
       "isOnAtlas": false
     }
