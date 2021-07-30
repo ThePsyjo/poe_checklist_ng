@@ -48,6 +48,16 @@ input[type=checkbox]:focus {
   border-color: map-get($theme-colors, primary);
   box-shadow: none;
 }
+input[type=text]:focus {
+  outline: none;
+  border-color: map-get($theme-colors, primary);
+  box-shadow: none;
+}
+input[type=text]{
+  outline: none;
+  border-color: map-get($theme-colors, primary);
+  box-shadow: none;
+}
 a{color: map-get($theme-colors, primary);}
 a:hover{color: map-get($theme-colors, primary_highlight);}
 //input[type=checkbox]:checked:after{
