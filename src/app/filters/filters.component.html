@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <input *ngIf="isSearch" type="text" class="form-control bg-dark" [(ngModel)]="filters.misc.search.state"
+    <input *ngIf="isSearch" type="search" class="form-control bg-dark" [(ngModel)]="filters.misc.search.state"
            placeholder="Search ..." (keyup.escape)="clearSearch()">
   </div>
 </ng-template>
