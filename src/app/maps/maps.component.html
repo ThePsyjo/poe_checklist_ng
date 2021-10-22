@@ -60,8 +60,8 @@
     <ng-container *ngIf="isVisible(map)">
       <tr [class]="colorClass(map)" (click)="onRowClick(map)">
         <td [class]="colorClass(map, true)">{{map.name}}</td>
-        <td>{{map.tier}}</td>
-        <td>{{map.region}}</td>
+        <td [class]="colorClass(map, false)">{{map.tier}}</td>
+        <td [class]="colorClass(map, false)">{{map.region}}</td>
         <td>
           <div class="text-center" (click)="onTdClick(map, 'c');$event.stopPropagation()">
             <input class="form-check-input" type="checkbox" [(ngModel)]="map.c"/>
