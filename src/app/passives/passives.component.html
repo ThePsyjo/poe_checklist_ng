@@ -43,10 +43,14 @@
   <tbody>
   <ng-container *ngFor="let row of model">
     <ng-container *ngIf="isVisible(row)">
-      <tr [class.text-secondary]="row.checked" (click)="onRowClick(row)">
-        <td>{{row.act}}</td>
-        <td><a (click)="$event.stopPropagation()"  href="{{questLink(row)}}">{{row.name}}</a></td>
-        <td>{{row.objective}}</td>
+      <tr (click)="onRowClick(row)">
+        <td [class.text-secondary]="row.checked">{{row.act}}</td>
+        <td>
+          <a [class.text-secondary]="row.checked" (click)="$event.stopPropagation()" href="{{questLink(row)}}">
+            {{row.name}}
+          </a>
+        </td>
+        <td [class.text-secondary]="row.checked">{{row.objective}}</td>
         <td>
           <div class="text-center">
             <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked" (ngModelChange)="saveModel()"/>
