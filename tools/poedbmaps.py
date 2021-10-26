@@ -4,6 +4,12 @@ import json
 
 def update(data, name, unique, tier, region):
     if name in (
+        'The Perandus Manor Chateau Map',
+    ):
+        print('skipped')
+        return
+
+    if name in (
         'Pit of the Chimera Map',
         'Lair of the Hydra Map',
         'Maze of the Minotaur Map',
@@ -11,36 +17,39 @@ def update(data, name, unique, tier, region):
     ):
         tier = 16
 
+    if (
+        name.startswith('Replica')
+        or name in (
+            'Untainted Paradise Tropical Island Map',
+            'Hall of Grandmasters Promenade Map'
+            'Altered Distant Memory Siege Map',
+            'Augmented Distant Memory Haunted Mansion Map',
+            'Rewritten Distant Memory Basilica Map',
+            'Twisted Distant Memory Park Map',
+            'Cortex Relic Chambers Map',
+        )
+    ):
+        region = None
+
     for item in data['list']:
         if item['name'] == name:
-            if tier:
-                item['tier'] = tier
-            else:
-                if 'tier' in item:
-                    del item['tier']
+            item['tier'] = tier
             if region:
                 item['region'] = region
-            else:
-                if 'region' in item:
-                    del item['region']
-            print(f'{name} found')
+            print(f'  updated')
             break
     else:
         item = dict(
             name=name,
+            tier=tier,
             isUnique=unique,
-            isOnAtlas=bool(tier),
+            isOnAtlas=bool(region),
         )
-        if tier:
-          item['tier'] = tier
         if region:
-          item['region'] = region
+            item['region'] = region
         data['list'].append(item)
-        print(f'{name} added')
+        print(f'  added')
 
-skip_names = [
-    'Harbinger Map',
-]
 
 def search_tier(element):
   for item in element.contents:
@@ -58,7 +67,8 @@ def search_tier(element):
 with open('MAPS_non_atlas.json') as _tpl, open('out.json', 'w') as _out:
     tpl = json.load(_tpl)
 
-    data = BeautifulSoup(urlopen(f'https://poedb.tw/us/Maps').read(), features='html.parser')
+    base_url = 'https://poedb.tw'
+    data = BeautifulSoup(urlopen(f'{base_url}/us/Maps').read(), features='html.parser')
     for row in data.find_all('tr'):
         r = row.find_all('td')
         if not r:
@@ -70,19 +80,26 @@ with open('MAPS_non_atlas.json') as _tpl, open('out.json', 'w') as _out:
             continue
         # print(links[0])
         name = links[0].string
-        if not name.endswith('Map') or name in skip_names:
-            continue
-        if len(links) > 1:
-            region = links[1].string
-            # print(name)
-            tier = search_tier(r.find('span'))
-            # print(tier)
-            # tier = int(r.find('span').contents[-1].split()[-1])
-            # print(tier)
-        else:
-            tier = region = None
 
-        # tier, name, region = int(r[0].string), r[3].a.string, r[6].a.string
+        print(f'Getting info for "{name}"...')
+        map_info = BeautifulSoup(urlopen(f'{base_url}/{links[0]["href"]}').read(), features='html.parser')
+        map_info = map_info.find('div', {'class': 'Stats'})
+        if not map_info:
+            print('  No map info found, skipping')
+            continue
+
+        if map_info.contents[0].strip() != 'Maps':
+            print('  Not a map, skipping')
+            continue
+        
+        region = map_info.find('a')
+        if not region:
+            print('  Not on atlas, skipping')
+            continue
+        
+        region = region.string
+        tier = search_tier(map_info.find('span'))
+        
         update(tpl, name, 'item_unique' in links[0]['class'], tier, region)
 
     json.dump(fp=_out, obj=tpl, indent=2)
