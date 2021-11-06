@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
-  // ga:{
-  //   client: '',
-  //   slot: '',
-  // },
+  ga:{
+    client: null,
+    slot: null,
+  },
 };
