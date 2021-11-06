@@ -103,6 +103,16 @@ export class MapsComponent implements OnInit {
         ..._map
       }
     })
+
+    this.model = this.model.sort((a, b) => {
+      return compare(a.name, b.name, true);
+    })
+    this.model = this.model.sort((a, b) => {
+      return compare(a.tier ?? 999, b.tier ?? 999, true);
+    })
+    this.model = this.model.sort((a, b) => {
+      return compare(a.isOnAtlas ? 0 : 1, b.isOnAtlas ? 0 : 1, true);
+    })
   }
 
   saveModel() {
