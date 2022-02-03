@@ -1,43 +1,46 @@
 """
 Expects the file `maps` with content like
 
+.. code::
 
   Tier 1
-  
+
       Pen Map
       Arcade Map
       Jungle Valley Map
       Coves Map
-  
-  
+
+
   Tier 2
-  
+
       Peninsula Map
       Grotto Map
       ...
- 
 
-Uses `MAPS-template.json` as base for updating and writes `out.json`.
+
+Uses `MAPS_non_atlas.json` as base for updating and writes `out.json`.
 """
 
 import json
 
-def update(data, name, tier):
+
+def update(data, name, _tier):
     for item in data['list']:
         if item['name'] == name:
-            item['tier'] = tier
-            #print(f'{name} found')
+            item['tier'] = _tier
+            # print(f'{name} found')
             break
     else:
         data['list'].append(dict(
             name=name,
-            tier=tier,
+            tier=_tier,
             isUnique=False,
             isOnAtlas=True,
         ))
         print(f'{name} added')
 
-with open('maps') as _in, open('MAPS-template.json') as _tpl, open('out.json', 'w') as _out:
+
+with open('maps') as _in, open('MAPS_non_atlas.json') as _tpl, open('out.json', 'w') as _out:
     tpl = json.load(_tpl)
     for line in _in:
         line = line.strip()
@@ -47,7 +50,7 @@ with open('maps') as _in, open('MAPS-template.json') as _tpl, open('out.json', '
             tier = int(line.split()[1])
             continue
 
-        update(tpl, line, tier) 
-        
+        update(tpl, line, tier)
+
     json.dump(fp=_out, obj=tpl, indent=2)
 
