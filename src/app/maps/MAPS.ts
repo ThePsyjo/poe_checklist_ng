@@ -1,5 +1,5 @@
 export default {
-  "version": 3.16,
+  "version": 3.17,
   "list": [
     {
       "name": "Esh's Breachstone",
@@ -24,12 +24,6 @@ export default {
     {
       "name": "Hall of Grandmasters Promenade Map",
       "isUnique": true,
-      "isOnAtlas": false,
-      "tier": 5
-    },
-    {
-      "name": "The Pale Court",
-      "isUnique": false,
       "isOnAtlas": false
     },
     {
@@ -40,8 +34,7 @@ export default {
     {
       "name": "Untainted Paradise Tropical Island Map",
       "isUnique": true,
-      "isOnAtlas": false,
-      "tier": 3
+      "isOnAtlas": false
     },
     {
       "name": "Chayula's Breachstone",
@@ -90,885 +83,737 @@ export default {
       "isOnAtlas": false
     },
     {
-      "name": "Cortex Relic Chambers Map",
-      "tier": 9,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Replica Cortex Relic Chambers Map",
-      "tier": 9,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Whakawairua Tuahu Strand Map",
-      "tier": 2,
+      "name": "The Coward's Trial",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "tier": 15
     },
     {
-      "name": "Augmented Distant Memory Haunted Mansion Map",
-      "tier": 1,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Doryani's Machinarium Maze Map",
-      "tier": 5,
+      "name": "Whakawairua Tuahu",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 14
     },
     {
-      "name": "Maelstr\u00f6m of Chaos Atoll Map",
-      "tier": 3,
+      "name": "Doryani's Machinarium",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 14
     },
     {
-      "name": "Hallowed Ground Cemetery Map",
-      "tier": 4,
+      "name": "Maelström of Chaos",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "tier": 6
     },
     {
-      "name": "Pillars of Arun Dunes Map",
-      "tier": 2,
+      "name": "Oba's Cursed Trove",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 1
     },
     {
-      "name": "Replica Pillars of Arun Dunes Map",
-      "tier": 2,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Olmec's Sanctum Bone Crypt Map",
-      "tier": 3,
+      "name": "The Vinktar Square",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 5
     },
+
     {
-      "name": "Convent of the Twins' Flame Bone Crypt Map",
-      "tier": 3,
+      "name": "Acton's Nightmare",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 4
     },
     {
-      "name": "Caer Blaidd, Wolfpack's Den Underground River Map",
-      "tier": 2,
+      "name": "Death and Taxes",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 3
     },
     {
-      "name": "Vaults of Atziri Vaal Pyramid Map",
-      "tier": 4,
+      "name": "Olmec's Sanctum",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "tier": 7
     },
     {
-      "name": "The Vinktar Square Courtyard Map",
-      "tier": 3,
+      "name": "Mao Kun",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "tier": 5
     },
     {
-      "name": "Mao Kun Shore Map",
-      "tier": 14,
+      "name": "Hallowed Ground",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "tier": 4
     },
     {
-      "name": "The Twilight Temple Moon Temple Map",
-      "tier": 6,
+      "name": "Pillars of Arun",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 10
     },
     {
-      "name": "Poorjoy's Asylum Temple Map",
-      "tier": 11,
+      "name": "Caer Blaidd, Wolfpack's Den",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "tier": 12
     },
     {
-      "name": "Replica Poorjoy's Asylum Temple Map",
-      "tier": 11,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "The Putrid Cloister Museum Map",
-      "tier": 3,
+      "name": "Vaults of Atziri",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "tier": 12
     },
     {
-      "name": "Altered Distant Memory Siege Map",
-      "tier": 5,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "The Coward's Trial Cursed Crypt Map",
-      "tier": 3,
+      "name": "Poorjoy's Asylum",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "tier": 4
     },
     {
-      "name": "Acton's Nightmare Overgrown Shrine Map",
-      "tier": 9,
+      "name": "The Putrid Cloister",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "tier": 2
     },
     {
-      "name": "Oba's Cursed Trove Primordial Blocks Map",
-      "tier": 15,
+      "name": "The Twilight Temple",
       "isUnique": true,
       "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Death and Taxes Necropolis Map",
-      "tier": 5,
-      "isUnique": true,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Twisted Distant Memory Park Map",
-      "tier": 15,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Rewritten Distant Memory Basilica Map",
-      "tier": 13,
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Lookout Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Dungeon Map",
-      "tier": 1,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Foundry Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Alleyways Map",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Desert Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Arid Lake Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Flooded Mine Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Fungal Hollow Map",
-      "tier": 9,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Leyline Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Port Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Cells Map",
-      "tier": 13,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Arcade Map",
-      "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Relic Chambers Map",
-      "tier": 9,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Strand Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Chateau Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Grotto Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Glacier Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Lighthouse Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Canyon Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Grave Trough Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Crimson Township Map",
-      "tier": 10,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Forking River Map",
-      "tier": 11,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Forbidden Woods Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Conservatory Map",
-      "tier": 8,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Sulphur Vents Map",
-      "tier": 15,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Haunted Mansion Map",
-      "tier": 1,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Maze Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Toxic Sewer Map",
-      "tier": 9,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Ancient City Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Spider Lair Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Barrows Map",
-      "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Mausoleum Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Fields Map",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Thicket Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Wharf Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Ashen Wood Map",
-      "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Atoll Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Cemetery Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "tier": 3
     },
     {
       "name": "Underground Sea Map",
-      "tier": 13,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Dunes Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Bone Crypt Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Underground River Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Gardens Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Arachnid Nest Map",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Laboratory Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Overgrown Ruin Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Vaal Pyramid Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Armoury Map",
-      "tier": 11,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Courtyard Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Mud Geyser Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Shore Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Tropical Island Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Mineral Pools Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Moon Temple Map",
-      "tier": 6,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Sepulchre Map",
-      "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Tower Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Waste Pool Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Plateau Map",
-      "tier": 15,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Estuary Map",
       "tier": 1,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
+    },
+    {
+      "name": "Mesa Map",
+      "tier": 1,
+      "isUnique": false,
+      "isOnAtlas": true
     },
     {
       "name": "Vault Map",
-      "tier": 4,
+      "tier": 1,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
     },
     {
-      "name": "Temple Map",
-      "tier": 11,
+      "name": "Palace Map",
+      "tier": 1,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
     },
     {
       "name": "Museum Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Siege Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Wasteland Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Bog Map",
-      "tier": 13,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Cursed Crypt Map",
-      "tier": 3,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Orchard Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Promenade Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Lair Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Spider Forest Map",
-      "tier": 4,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Waterways Map",
       "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "isOnAtlas": true
     },
     {
-      "name": "Pit Map",
+      "name": "Shrine Map",
       "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
     },
     {
-      "name": "Dry Sea Map",
+      "name": "Cold River Map",
       "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Defiled Cathedral Map",
-      "tier": 14,
+      "name": "Arachnid Nest Map",
+      "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
     },
     {
-      "name": "Summit Map",
-      "tier": 16,
+      "name": "Waste Pool Map",
+      "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Overgrown Shrine Map",
-      "tier": 9,
+      "name": "Forking River Map",
+      "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Primordial Blocks Map",
-      "tier": 15,
+      "name": "Flooded Mine Map",
+      "tier": 2,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "isOnAtlas": true
+    },
+    {
+      "name": "Basilica Map",
+      "tier": 2,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Moon Temple Map",
+      "tier": 3,
+      "isUnique": false,
+      "isOnAtlas": true
     },
     {
       "name": "Necropolis Map",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Racecourse Map",
       "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
     },
     {
-      "name": "Caldera Map",
+      "name": "Beach Map",
       "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Ghetto Map",
+      "name": "Lava Chamber Map",
       "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Park Map",
-      "tier": 15,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Malformation Map",
-      "tier": 9,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Terrace Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
-    },
-    {
-      "name": "Arsenal Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Core Map",
+      "name": "Toxic Sewer Map",
       "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
       "name": "Colosseum Map",
       "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "isOnAtlas": true
     },
     {
-      "name": "Acid Caverns Map",
-      "tier": 13,
+      "name": "Mineral Pools Map",
+      "tier": 3,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "isOnAtlas": true
+    },
+    {
+      "name": "Estuary Map",
+      "tier": 3,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Cemetery Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Overgrown Shrine Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Temple Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Ghetto Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Conservatory Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Tower Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Mausoleum Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Thicket Map",
+      "tier": 4,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Courtyard Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Shore Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Cells Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Cage Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Bazaar Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Overgrown Ruin Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Promenade Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Coves Map",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Atoll Map",
+      "tier": 6,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Crimson Township Map",
+      "tier": 6,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Arid Lake Map",
+      "tier": 6,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "City Square Map",
+      "tier": 6,
+      "isUnique": false,
+      "isOnAtlas": true
     },
     {
       "name": "Dark Forest Map",
-      "tier": 11,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
-    },
-    {
-      "name": "Crimson Temple Map",
-      "tier": 14,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
-    },
-    {
-      "name": "Plaza Map",
-      "tier": 2,
-      "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
-    },
-    {
-      "name": "Dig Map",
       "tier": 6,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "isOnAtlas": true
     },
     {
-      "name": "Palace Map",
-      "tier": 12,
+      "name": "Jungle Valley Map",
+      "tier": 6,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "isOnAtlas": true
     },
     {
-      "name": "Lava Lake Map",
-      "tier": 14,
+      "name": "Channel Map",
+      "tier": 6,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Haewark Hamlet"
+      "isOnAtlas": true
     },
     {
-      "name": "Basilica Map",
-      "tier": 13,
+      "name": "Bone Crypt Map",
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Sunken City Map",
-      "tier": 12,
+      "name": "Arcade Map",
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     },
     {
-      "name": "Reef Map",
-      "tier": 2,
+      "name": "Infested Valley Map",
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "isOnAtlas": true
     },
     {
-      "name": "Carcass Map",
-      "tier": 3,
+      "name": "Laboratory Map",
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "isOnAtlas": true
     },
     {
-      "name": "Stagnation Map",
-      "tier": 1,
+      "name": "Malformation Map",
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Lira Arthain"
+      "isOnAtlas": true
+    },
+    {
+      "name": "Canyon Map",
+      "tier": 7,
+      "isUnique": false,
+      "isOnAtlas": true
     },
     {
       "name": "Silo Map",
-      "tier": 4,
+      "tier": 7,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Glennach Cairns"
+      "isOnAtlas": true
+    },
+    {
+      "name": "Arsenal Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Defiled Cathedral Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Belfry Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Bramble Valley Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Phantasmagoria Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Shipyard Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Grotto Map",
+      "tier": 8,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Armoury Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Volcano Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Fields Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Precinct Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Ancient City Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Marshes Map",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Dunes Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Glacier Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Orchard Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Forbidden Woods Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Grave Trough Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Acid Caverns Map",
+      "tier": 10,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Caldera Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Spider Forest Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Iceberg Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Desert Spring Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Graveyard Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Lair Map",
+      "tier": 11,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Underground River Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Vaal Pyramid Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Stagnation Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Wasteland Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Dig Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Peninsula Map",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Plaza Map",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Gardens Map",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Frozen Cabins Map",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Carcass Map",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Lookout Map",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Maze Map",
+      "tier": 14,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Strand Map",
+      "tier": 14,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Primordial Pool Map",
+      "tier": 14,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Burial Chambers Map",
+      "tier": 14,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Haunted Mansion Map",
+      "tier": 14,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Cursed Crypt Map",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Coral Ruins Map",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Dry Sea Map",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Summit Map",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Ivory Temple Map",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Port Map",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Dungeon Map",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Crimson Temple Map",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Ashen Wood Map",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Pit of the Chimera",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Lair of the Hydra",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Maze of the Minotaur",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Forge of the Phoenix",
+      "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
     },
     {
       "name": "Vaal Temple Map",
       "tier": 16,
       "isUnique": false,
-      "isOnAtlas": true,
-      "region": "Valdo's Rest"
+      "isOnAtlas": true
     }
   ]
 }
