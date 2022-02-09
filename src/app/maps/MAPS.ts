@@ -786,34 +786,10 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Pit of the Chimera",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Lair of the Hydra",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Maze of the Minotaur",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Forge of the Phoenix",
-      "tier": 16,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
       "name": "Vaal Temple Map",
       "tier": 16,
       "isUnique": false,
-      "isOnAtlas": true
+      "isOnAtlas": false
     }
   ]
 }
