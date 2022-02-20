@@ -73,13 +73,77 @@
     },
     {
       "name": "The Shaper's Realm",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Eye of the Storm (Sirus)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Absence of Value and Meaning (The Elder)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Uber Elder in The Shaper's Realm",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Absence of Mercy and Empathy (The Maven)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Polaric Void (The Black Star)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Absence of Patience and Wisdom (The Searing Exarch)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Seething Chyme (The Infinite Hunger)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Absence of Symmetry and Harmony (The Eater of Worlds)",
+      "isUnique": true,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Maven's Invitation: The Formed",
       "isUnique": false,
       "isOnAtlas": false
     },
     {
-      "name": "Eye of the Storm",
-      "tier": 17,
-      "isUnique": true,
+      "name": "Maven's Invitation: The Twisted",
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Maven's Invitation: The Forgotten",
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Maven's Invitation: The Hidden",
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Maven's Invitation: The Feared",
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Maven's Invitation: The Elderslayers",
+      "isUnique": false,
       "isOnAtlas": false
     }
   ]
