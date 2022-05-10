@@ -1,0 +1,120 @@
+[
+  {
+    "name": "The Coward's Trial",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 15
+  },
+  {
+    "name": "Whakawairua Tuahu",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 14
+  },
+  {
+    "name": "Doryani's Machinarium",
+    "isUnique": true,
+    "isOnAtlas": false,
+    "tier": 5
+  },
+  {
+    "name": "Maelström of Chaos",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 6
+  },
+  {
+    "name": "Oba's Cursed Trove",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 1
+  },
+  {
+    "name": "The Vinktar Square",
+    "isUnique": true,
+    "isOnAtlas": false,
+    "tier": 7
+  },
+  {
+    "name": "Hall of Grandmasters",
+    "isUnique": true,
+    "isOnAtlas": false,
+    "tier": 9
+  },
+  {
+    "name": "Acton's Nightmare",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 4
+  },
+  {
+    "name": "Death and Taxes",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 3
+  },
+  {
+    "name": "Olmec's Sanctum",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 7
+  },
+  {
+    "name": "Mao Kun",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 5
+  },
+  {
+    "name": "Hallowed Ground",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 4
+  },
+  {
+    "name": "Pillars of Arun",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 10
+  },
+  {
+    "name": "Untainted Paradise",
+    "isUnique": true,
+    "isOnAtlas": false
+  },
+  {
+    "name": "Caer Blaidd, Wolfpack's Den",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 12
+  },
+  {
+    "name": "Vaults of Atziri",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 12
+  },
+  {
+    "name": "Poorjoy's Asylum",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 4
+  },
+  {
+    "name": "The Putrid Cloister",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 2
+  },
+  {
+    "name": "The Twilight Temple",
+    "isUnique": true,
+    "isOnAtlas": true,
+    "tier": 3
+  },
+  {
+    "name": "The Beachhead",
+    "isUnique": true,
+    "isOnAtlas": false
+  }
+]

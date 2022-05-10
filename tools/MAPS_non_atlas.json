@@ -22,18 +22,8 @@
       "isOnAtlas": false
     },
     {
-      "name": "Hall of Grandmasters Promenade Map",
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
       "name": "Uul-Netol's Breachstone",
       "isUnique": false,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Untainted Paradise Tropical Island Map",
-      "isUnique": true,
       "isOnAtlas": false
     },
     {
@@ -47,27 +37,22 @@
       "isOnAtlas": false
     },
     {
-      "name": "The Beachhead Map",
-      "isUnique": true,
-      "isOnAtlas": false
-    },
-    {
-      "name": "Forge of the Phoenix Map",
+      "name": "Forge of the Phoenix",
       "isUnique": false,
       "isOnAtlas": false
     },
     {
-      "name": "Lair of the Hydra Map",
+      "name": "Lair of the Hydra",
       "isUnique": false,
       "isOnAtlas": false
     },
     {
-      "name": "Maze of the Minotaur Map",
+      "name": "Maze of the Minotaur",
       "isUnique": false,
       "isOnAtlas": false
     },
     {
-      "name": "Pit of the Chimera Map",
+      "name": "Pit of the Chimera",
       "isUnique": false,
       "isOnAtlas": false
     },

@@ -31,16 +31,18 @@ def update(data, name, _tier):
             # print(f'{name} found')
             break
     else:
-        data['list'].append(dict(
-            name=name,
-            tier=_tier,
-            isUnique=False,
-            isOnAtlas=True,
-        ))
+        data['list'].append(
+            dict(
+                name=name,
+                tier=_tier,
+                isUnique=False,
+                isOnAtlas=True,
+            )
+        )
         print(f'{name} added')
 
 
-with open('maps') as _in, open('MAPS_non_atlas.json') as _tpl, open('out.json', 'w') as _out:
+with open('maps') as _in, open('MAPS_non_atlas.json') as _tpl, open('unique.json') as _unique:
     tpl = json.load(_tpl)
     for line in _in:
         line = line.strip()
@@ -52,5 +54,7 @@ with open('maps') as _in, open('MAPS_non_atlas.json') as _tpl, open('out.json', 
 
         update(tpl, line, tier)
 
-    json.dump(fp=_out, obj=tpl, indent=2)
+    tpl['list'].extend(json.load(_unique))
 
+with open('out.json', 'w') as _out:
+    json.dump(fp=_out, obj=tpl, indent=2)
