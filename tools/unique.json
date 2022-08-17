@@ -33,7 +33,6 @@
     "name": "The Vinktar Square",
     "isUnique": true,
     "isOnAtlas": false,
-    "tier": 7
   },
   {
     "name": "Hall of Grandmasters",
@@ -114,6 +113,11 @@
   },
   {
     "name": "The Beachhead",
+    "isUnique": true,
+    "isOnAtlas": false
+  },
+  {
+    "name": "The Tower of Ordeals",
     "isUnique": true,
     "isOnAtlas": false
   }
