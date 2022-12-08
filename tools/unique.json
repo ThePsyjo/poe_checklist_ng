@@ -3,31 +3,31 @@
     "name": "The Coward's Trial",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 15
+    "tier": 12
   },
   {
     "name": "Whakawairua Tuahu",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 14
+    "tier": 1
   },
   {
     "name": "Doryani's Machinarium",
     "isUnique": true,
     "isOnAtlas": false,
-    "tier": 5
+    "tier": 14
   },
   {
     "name": "Maelström of Chaos",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 6
+    "tier": 4
   },
   {
     "name": "Oba's Cursed Trove",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 1
+    "tier": 14
   },
   {
     "name": "The Vinktar Square",
@@ -37,44 +37,43 @@
   {
     "name": "Hall of Grandmasters",
     "isUnique": true,
-    "isOnAtlas": false,
-    "tier": 9
+    "isOnAtlas": false
   },
   {
     "name": "Acton's Nightmare",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 4
+    "tier": 6
   },
   {
     "name": "Death and Taxes",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 3
+    "tier": 7
   },
   {
     "name": "Olmec's Sanctum",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 7
+    "tier": 3
   },
   {
     "name": "Mao Kun",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 5
+    "tier": 4
   },
   {
     "name": "Hallowed Ground",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 4
+    "tier": 12
   },
   {
     "name": "Pillars of Arun",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 10
+    "tier": 15
   },
   {
     "name": "Untainted Paradise",
@@ -85,31 +84,31 @@
     "name": "Caer Blaidd, Wolfpack's Den",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 12
+    "tier": 10
   },
   {
     "name": "Vaults of Atziri",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 12
+    "tier": 4
   },
   {
     "name": "Poorjoy's Asylum",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 4
+    "tier": 5
   },
   {
     "name": "The Putrid Cloister",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 2
+    "tier": 3
   },
   {
     "name": "The Twilight Temple",
     "isUnique": true,
     "isOnAtlas": true,
-    "tier": 3
+    "tier": 2
   },
   {
     "name": "The Beachhead",
