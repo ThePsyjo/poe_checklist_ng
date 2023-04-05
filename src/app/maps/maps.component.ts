@@ -123,8 +123,16 @@ export class MapsComponent implements OnInit {
     // console.log(map)
     let search = this.filters.misc.search.state as string
     if (search) {
-      //console.log(`${search} in ${map.id} -> ${map.id.search(search.toLowerCase())}`)
-      if (map.id.search(search.toLowerCase()) === -1) return false
+      for (const k of search.toLowerCase().split(' ')) {
+        if (k.startsWith('tier:')){
+          if(map.tier == undefined) return false
+          let tier = Number(k.split(':')[1])
+          if (map.tier != tier) return false
+        }
+        else {
+          if (!map.id.includes(k)) return false
+        }
+      }
     }
     if (map.isUnique && this.filters.hide_misc.hide_unique.state) return false
     if (!map.isOnAtlas && this.filters.hide_misc.hide_non_atlas.state) return false
