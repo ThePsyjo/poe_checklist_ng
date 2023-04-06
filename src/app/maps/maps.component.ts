@@ -67,7 +67,7 @@ export class MapsComponent implements OnInit {
     if (clear) {
       checked = {}
     } else {
-        checked = JSON.parse(localStorage.getItem('map_checked') ?? '{}')
+      checked = JSON.parse(localStorage.getItem('map_checked') ?? '{}')
     }
     // console.log(localStorage.map_checked)
     // console.log(checked)
@@ -120,16 +120,17 @@ export class MapsComponent implements OnInit {
   }
 
   isVisible(map: MapObject) {
-    // console.log(map)
     let search = this.filters.misc.search.state as string
     if (search) {
       for (const k of search.toLowerCase().split(' ')) {
-        if (k.startsWith('tier:')){
-          if(map.tier == undefined) return false
-          let tier = Number(k.split(':')[1])
+        if (k.startsWith('tier:') || Number(k)) {
+          if (map.tier == undefined) return false
+
+          let tier: number = Number(k)
+          if (isNaN(tier)) tier = Number(k.split(':')[1])
+
           if (map.tier != tier) return false
-        }
-        else {
+        } else {
           if (!map.id.includes(k)) return false
         }
       }
