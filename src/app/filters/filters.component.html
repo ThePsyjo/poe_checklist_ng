@@ -34,7 +34,7 @@
   <form *ngIf="isSearch">
     <div class="input-group">
       <input type="text" class="form-control bg-dark border-secondary" [(ngModel)]="filters.misc.search.state"
-             placeholder="Search..." (keyup.escape)="clearSearch()">
+             [placeholder]="search_placeholder" (keyup.escape)="clearSearch()">
       <div class="input-group-append">
         <button type="reset" class="btn btn-primary input-group-text">clear</button>
       </div>

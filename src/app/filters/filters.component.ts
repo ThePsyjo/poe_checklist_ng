@@ -33,6 +33,7 @@ export class FiltersComponent implements OnInit {
   @Input() isSearch: boolean = false;
   @Input() isBordered: boolean = true;
   @Input() storageKey: string = '';
+  @Input() search_placeholder: string = 'Search...';
   @Input() filterOrder: Record<string, any>[] = [];
   @Input() filters: FiltersBase = {
     misc: {
