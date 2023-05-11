@@ -1,4 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgIf, NgTemplateOutlet, NgFor } from '@angular/common';
 
 export enum FilterItemType {
   Checkbox,
@@ -24,9 +26,11 @@ export interface StoreFilters extends Record<string, Record<string, StoreFilterI
 }
 
 @Component({
-  selector: 'app-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.css']
+    selector: 'app-filters',
+    templateUrl: './filters.component.html',
+    styleUrls: ['./filters.component.css'],
+    standalone: true,
+    imports: [NgIf, NgTemplateOutlet, NgFor, FormsModule]
 })
 export class FiltersComponent implements OnInit {
   @Input() isCollapse: boolean = false;

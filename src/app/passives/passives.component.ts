@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {FilterItem, FilterItemType, FiltersBase} from "../filters/filters.component";
-import {Sort} from "@angular/material/sort";
+import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
+import { Sort, MatSortModule } from "@angular/material/sort";
 import {compare} from "../common";
 import PASSIVES, {wikiLink} from "./PASSIVES"
+import { FormsModule } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
 
 export interface Quest extends Record<string, any> {
   id: number;
@@ -18,9 +20,11 @@ export interface Filters extends FiltersBase {
 }
 
 @Component({
-  selector: 'app-passives',
-  templateUrl: './passives.component.html',
-  styleUrls: ['./passives.component.css']
+    selector: 'app-passives',
+    templateUrl: './passives.component.html',
+    styleUrls: ['./passives.component.css'],
+    standalone: true,
+    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule]
 })
 export class PassivesComponent implements OnInit {
   model: Quest[] = []

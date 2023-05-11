@@ -1,8 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import MAPS from './MAPS';
-import {Sort} from '@angular/material/sort';
-import {FilterItem, FilterItemType, FiltersBase} from "../filters/filters.component";
+import { Sort, MatSortModule } from '@angular/material/sort';
+import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
 import {compare} from "../common";
+import { FormsModule } from '@angular/forms';
+import { NgFor, NgIf, DecimalPipe } from '@angular/common';
 
 export interface MapObject extends Record<string, any> {
   id: string;
@@ -21,9 +23,11 @@ export interface Filters extends FiltersBase {
 }
 
 @Component({
-  selector: 'maps',
-  templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+    selector: 'maps',
+    templateUrl: './maps.component.html',
+    styleUrls: ['./maps.component.css'],
+    standalone: true,
+    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule, DecimalPipe]
 })
 export class MapsComponent implements OnInit {
   model: MapObject[] = [];

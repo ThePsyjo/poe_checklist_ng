@@ -8,8 +8,8 @@ describe('PassivesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PassivesComponent ]
-    })
+    imports: [PassivesComponent]
+})
     .compileComponents();
   });
 
