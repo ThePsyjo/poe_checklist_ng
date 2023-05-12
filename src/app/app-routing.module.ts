@@ -1,18 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MapsComponent} from './maps/maps.component';
-import {NotFoundComponent} from './not-found/not-found.component';
-import {AboutComponent} from './about/about.component';
-import {TrialsComponent} from './trials/trials.component';
-import {PassivesComponent} from "./passives/passives.component";
 
 const routes: Routes = [
-  {path: '', component: MapsComponent},
-  {path: 'passives', component: PassivesComponent},
-  // {path: 'pantheons', component: PantheonsComponent},
-  {path: 'trials', component: TrialsComponent},
-  {path: 'about', component: AboutComponent},
-  {path: '404', component: NotFoundComponent},
+  {path: '', loadComponent: () => import('./maps/maps.component').then(c => c.MapsComponent)},
+  {path: 'passives', loadComponent: () => import('./passives/passives.component').then(c => c.PassivesComponent)},
+  // {path: 'pantheons', loadComponent: () => import('./pantheons/pantheons.component').then(c => c.PantheonsComponent)},
+  {path: 'trials', loadComponent: () => import('./trials/trials.component').then(c => c.TrialsComponent)},
+  {path: 'about', loadComponent: () => import('./about/about.component').then(c => c.AboutComponent)},
+  {path: '404', loadComponent: () => import('./not-found/not-found.component').then(c => c.NotFoundComponent)},
   {path: '**', redirectTo: '/404'},
 ];
 
