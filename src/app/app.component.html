@@ -24,7 +24,7 @@
   </div>
 </nav>
 
-<div *ngIf="ga.client" class="container d-grid bg-black bg-opacity-50 text-center mt-4 p-1 rounded-2">
+<div *ngIf="ga.client && location.path() != '/about'" class="container d-grid bg-black bg-opacity-50 text-center mt-4 p-1 rounded-2">
   <div class="p-2" style="z-index: 0;grid-area: 1/1;">Please consider supporting us by disabling AdBlock.</div>
   <div style="z-index: 1; grid-area: 1/1;">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

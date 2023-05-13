@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {environment} from "../environments/environment";
-import { NgIf } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import {Location, NgIf} from '@angular/common';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -12,6 +12,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'poe-checklist-ng';
+
+  constructor(public location: Location) {}
 
   get ga(): Record<string, string | null> {
     return 'ga' in environment ? environment['ga'] : {client: null, slot: null}
