@@ -23,7 +23,7 @@ body{
 }
 .table-hover tbody tr:hover td
 {
-  background-color: map-get($theme-colors, dark-trans-10);
+  background-color: map-get($theme-colors, dark-trans-50);
 }
 .cursor-help {
   cursor: help;
