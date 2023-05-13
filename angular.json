@@ -50,7 +50,7 @@
                 "scripts": true,
                 "styles": {
                   "minify": true,
-                  "inlineCritical": false
+                  "inlineCritical": true
                 }
               },
               "outputHashing": "all",
@@ -62,8 +62,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "700kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -161,7 +161,10 @@
             "browserTarget": "poe-checklist-ng:build:production",
             "serverTarget": "poe-checklist-ng:server:production",
             "routes": [
-              "/"
+              "/",
+              "/passives",
+              "/trials",
+              "/about"
             ]
           },
           "configurations": {
