@@ -50,7 +50,7 @@
                 "scripts": true,
                 "styles": {
                   "minify": true,
-                  "inlineCritical": true
+                  "inlineCritical": false
                 }
               },
               "outputHashing": "all",
