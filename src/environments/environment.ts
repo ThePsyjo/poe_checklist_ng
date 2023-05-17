@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  ga: {client: null, slot: null},
 };
 
 /*

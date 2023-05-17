@@ -24,22 +24,6 @@
   </div>
 </nav>
 
-<div *ngIf="ga.client && location.path() != '/about'" class="container d-grid bg-black bg-opacity-50 text-center mt-4 p-1 rounded-2">
-  <div class="p-2" style="z-index: 0;grid-area: 1/1;">Please consider supporting us by disabling AdBlock.</div>
-  <div style="z-index: 1; grid-area: 1/1;">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block; height: 100%; width: 100%;"
-         [attr.data-ad-client]="ga.client"
-         [attr.data-ad-slot]="ga.slot"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-</div>
-
 <div class="container bg-black bg-opacity-75 mt-4 p-3 mb-2 rounded-2">
   <router-outlet></router-outlet>
 </div>
