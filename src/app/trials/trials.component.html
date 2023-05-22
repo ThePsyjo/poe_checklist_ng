@@ -20,8 +20,8 @@
         Clear all check marks? This can not be undone!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clear()">Clear</button>
+        <button id="trials-reset-cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="trials-reset-accept" type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clear()">Clear</button>
       </div>
     </div>
   </div>
@@ -31,11 +31,11 @@
        class="table text-primary table-hover border-secondary">
   <thead>
   <tr>
-    <th mat-sort-header="act" scope="col">Act</th>
-    <th mat-sort-header="zone" scope="col">Zone</th>
-    <th mat-sort-header="difficulty" scope="col">Difficulty</th>
+    <th id="trials-sort-act" mat-sort-header="act" scope="col">Act</th>
+    <th id="trials-sort-zone" mat-sort-header="zone" scope="col">Zone</th>
+    <th id="trials-sort-diff" mat-sort-header="difficulty" scope="col">Difficulty</th>
     <th class="text-center" scope="col">
-      <button type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
+      <button id="trials-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
               data-bs-target="#clearAll"></button>
     </th>
   </tr>

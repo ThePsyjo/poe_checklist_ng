@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <div class="flex-column"><h2>Maps ({{version | number: '0.2'}})</h2></div>
     <div class="flex-column">
-      <button type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
+      <button id="maps-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
               data-bs-target="#clearAll"></button>
     </div>
   </div>
@@ -28,8 +28,8 @@
         Clear all check marks? This can not be undone!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clear('all')">Clear</button>
+        <button id="maps-reset-cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button id="maps-reset-accept" type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="clear('all')">Clear</button>
       </div>
     </div>
   </div>
@@ -39,8 +39,8 @@
        class="table text-primary table-hover border-secondary">
   <thead>
   <tr>
-    <th mat-sort-header="name" scope="col">Name</th>
-    <th mat-sort-header="tier" scope="col">Tier</th>
+    <th id="maps-sort-name" mat-sort-header="name" scope="col">Name</th>
+    <th id="maps-sort-tier" mat-sort-header="tier" scope="col">Tier</th>
     <th class="text-center cursor-help" scope="col" data-toggle="tooltip" data-placement="top"
         title="Completed">
       C

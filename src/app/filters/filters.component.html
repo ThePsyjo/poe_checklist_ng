@@ -1,5 +1,6 @@
 <h3 *ngIf="isCollapse">
   <button
+    id="filter-expand"
     class="btn btn-primary p-1"
     type="button"
     data-bs-toggle="collapse"
@@ -22,8 +23,8 @@
       <div *ngFor="let k of group.keys">
         <ng-container *ngIf="filters[group.name][k].type == 0">
           <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
-                 (ngModelChange)="saveFilters()" id="{{k}}">
-          <label class="form-check-label align-middle m-0" for="{{k}}">{{filters[group.name][k].name}}</label>
+                 (ngModelChange)="saveFilters()" id="filter-input-{{k}}">
+          <label id="filter-label-{{k}}" class="form-check-label align-middle m-0" for="filter-input-{{k}}">{{filters[group.name][k].name}}</label>
         </ng-container>
         <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
       </div>
@@ -33,10 +34,10 @@
 
   <form *ngIf="isSearch">
     <div class="input-group">
-      <input type="text" class="form-control bg-dark border-secondary" [(ngModel)]="filters.misc.search.state"
+      <input id="search-input" type="text" class="form-control bg-dark border-secondary" [(ngModel)]="filters.misc.search.state"
              [placeholder]="search_placeholder" (keyup.escape)="clearSearch()">
       <div class="input-group-append">
-        <button type="reset" class="btn btn-primary input-group-text">clear</button>
+        <button id="search-clear" type="reset" class="btn btn-primary input-group-text">clear</button>
       </div>
     </div>
   </form>
