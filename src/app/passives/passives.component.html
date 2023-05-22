@@ -46,7 +46,7 @@
       <tr (click)="onRowClick(row)">
         <td [class.text-secondary]="row.checked">{{row.act}}</td>
         <td>
-          <a [class.text-secondary]="row.checked" (click)="$event.stopPropagation()" href="{{questLink(row)}}">
+          <a [class.text-secondary]="row.checked" (click)="$event.stopPropagation()" href="{{questLink(row)}}" target="_blank">
             {{row.name}}
           </a>
         </td>

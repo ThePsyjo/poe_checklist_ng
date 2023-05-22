@@ -1,5 +1,5 @@
 export function wikiLink(name: string) {
-  return `https://pathofexile.gamepedia.com/${encodeURI(name)}`;
+  return `https://www.poewiki.net/wiki/${encodeURI(name)}`;
 }
 
 export default [
