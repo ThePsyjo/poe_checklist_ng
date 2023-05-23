@@ -96,15 +96,16 @@ export class TrialsComponent implements OnInit {
     });
   }
 
-  isVisible(trial: Trial) {
-    // search
-    return !(
-      (trial.checked && this.filters.trials.all.state)
-      || (trial.difficulty == 'Normal' && this.filters.trials.normal.state)
-      || (trial.difficulty == 'Cruel' && this.filters.trials.cruel.state)
-      || (trial.difficulty == 'Merciless' && this.filters.trials.merciless.state)
-      || (trial.difficulty == 'Eternal' && this.filters.trials.eternal.state)
-    )
+  filterVisible(items: Trial[]) {
+    return items.filter((trial) => {
+      return !(
+        (trial.checked && this.filters.trials.all.state)
+        || (trial.difficulty == 'Normal' && this.filters.trials.normal.state)
+        || (trial.difficulty == 'Cruel' && this.filters.trials.cruel.state)
+        || (trial.difficulty == 'Merciless' && this.filters.trials.merciless.state)
+        || (trial.difficulty == 'Eternal' && this.filters.trials.eternal.state)
+      )
+    })
   }
 
   track(index: number, item: Trial) {

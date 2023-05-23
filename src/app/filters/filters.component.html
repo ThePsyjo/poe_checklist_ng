@@ -22,8 +22,11 @@
          class="flex-column px-2 mx-1 mb-2">
       <div *ngFor="let k of group.keys">
         <ng-container *ngIf="filters[group.name][k].type == 0">
-          <input class="form-check-input align-middle m-1" type="checkbox" [(ngModel)]="filters[group.name][k].state"
-                 (ngModelChange)="saveFilters()" id="filter-input-{{k}}">
+          <input id="filter-input-{{k}}"
+                 class="form-check-input align-middle m-1"
+                 type="checkbox"
+                 [(ngModel)]="filters[group.name][k].state"
+                 (ngModelChange)="saveFilters()">
           <label id="filter-label-{{k}}" class="form-check-label align-middle m-0" for="filter-input-{{k}}">{{filters[group.name][k].name}}</label>
         </ng-container>
         <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
@@ -34,8 +37,13 @@
 
   <form *ngIf="isSearch">
     <div class="input-group">
-      <input id="search-input" type="text" class="form-control bg-dark border-secondary" [(ngModel)]="filters.misc.search.state"
-             [placeholder]="search_placeholder" (keyup.escape)="clearSearch()">
+      <input id="search-input"
+             name="search-input"
+             type="text"
+             class="form-control bg-dark border-secondary"
+             [(ngModel)]="filters.misc.search.state"
+             [placeholder]="search_placeholder"
+             (keyup.escape)="clearSearch()">
       <div class="input-group-append">
         <button id="search-clear" type="reset" class="btn btn-primary input-group-text">clear</button>
       </div>

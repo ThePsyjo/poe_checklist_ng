@@ -104,9 +104,10 @@ export class PassivesComponent implements OnInit {
     this.saveModel()
   }
 
-  isVisible(quest: Quest) {
-    // search
-    return !(quest.checked && this.filters.quests.hide.state)
+  filterVisible(items: Quest[]) {
+    return items.filter((quest) => {
+      return !(quest.checked && this.filters.quests.hide.state)
+    })
   }
 
   track(index: number, item: Quest) {

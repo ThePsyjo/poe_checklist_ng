@@ -124,29 +124,31 @@ export class MapsComponent implements OnInit {
     });
   }
 
-  isVisible(map: MapObject) {
-    const search = this.filters.misc.search.state as string
-    if (search) {
-      for (const k of search.toLowerCase().split(' ')) {
-        if (k.startsWith('tier:') || Number(k)) {
-          if (map.tier == undefined) return false
+  filterVisible(items: MapObject[]): MapObject[]{
+    return items.filter((map) => {
+      const search = this.filters.misc.search.state as string
+      if(search) {
+        for (const k of search.toLowerCase().split(' ')) {
+          if (k.startsWith('tier:') || Number(k)) {
+            if (map.tier == undefined) return false
 
-          let tier: number = Number(k)
-          if (isNaN(tier)) tier = Number(k.split(':')[1])
+            let tier: number = Number(k)
+            if (isNaN(tier)) tier = Number(k.split(':')[1])
 
-          if (map.tier != tier) return false
-        } else {
-          if (!map.id.includes(k)) return false
+            if (map.tier != tier) return false
+          } else {
+            if (!map.id.includes(k)) return false
+          }
         }
       }
-    }
-    if (map.isUnique && this.filters.hide_misc.hide_unique.state) return false
-    if (!map.isOnAtlas && this.filters.hide_misc.hide_non_atlas.state) return false
-    if (!map.c && this.filters.show_checked.show_c.state) return true
-    if (!map.b && this.filters.show_checked.show_b.state) return true
-    if (map.c && this.filters.hide_checked.hide_c.state) return false
-    if (map.b && this.filters.hide_checked.hide_b.state) return false
-    return true
+      if(map.isUnique && this.filters.hide_misc.hide_unique.state) return false
+      if (!map.isOnAtlas && this.filters.hide_misc.hide_non_atlas.state) return false
+      if (!map.c && this.filters.show_checked.show_c.state) return true
+      if (!map.b && this.filters.show_checked.show_b.state) return true
+      if (map.c && this.filters.hide_checked.hide_c.state) return false
+      if (map.b && this.filters.hide_checked.hide_b.state) return false
+      return true
+    })
   }
 
   colorClass(map: MapObject, name: boolean = false) {

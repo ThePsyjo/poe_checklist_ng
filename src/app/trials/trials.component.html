@@ -41,19 +41,15 @@
   </tr>
   </thead>
   <tbody>
-  <ng-container *ngFor="let row of model; trackBy: track">
-    <ng-container *ngIf="isVisible(row)">
-      <tr (click)="onRowClick(row)">
-        <td [class.text-secondary]="row.checked">{{row.act}}</td>
-        <td [class.text-secondary]="row.checked">{{row.zone}}</td>
-        <td [class.text-secondary]="row.checked">{{row.difficulty}}</td>
-        <td>
-          <div class="text-center">
-            <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked"/>
-          </div>
-        </td>
-      </tr>
-    </ng-container>
-  </ng-container>
+    <tr *ngFor="let row of filterVisible(model); trackBy: track" (click)="onRowClick(row)">
+      <td [class.text-secondary]="row.checked">{{row.act}}</td>
+      <td [class.text-secondary]="row.checked">{{row.zone}}</td>
+      <td [class.text-secondary]="row.checked">{{row.difficulty}}</td>
+      <td>
+        <div class="text-center">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked"/>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>

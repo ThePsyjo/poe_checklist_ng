@@ -52,23 +52,19 @@
   </tr>
   </thead>
   <tbody>
-  <ng-container *ngFor="let map of model; trackBy: track">
-    <ng-container *ngIf="isVisible(map)">
-      <tr [class]="colorClass(map)" (click)="onRowClick(map)">
-        <td [class]="colorClass(map, true)">{{map.name}}</td>
-        <td [class]="colorClass(map, false)">{{map.tier}}</td>
-        <td>
-          <div class="text-center" (click)="onTdClick(map, 'c');$event.stopPropagation()">
-            <input class="form-check-input" type="checkbox" [(ngModel)]="map.c"/>
-          </div>
-        </td>
-        <td>
-          <div class="text-center" *ngIf="map.isOnAtlas" (click)="onTdClick(map, 'b');$event.stopPropagation()">
-            <input class="form-check-input" type="checkbox" [(ngModel)]="map.b"/>
-          </div>
-        </td>
-      </tr>
-    </ng-container>
-  </ng-container>
+    <tr *ngFor="let map of filterVisible(model); trackBy: track" [class]="colorClass(map)" (click)="onRowClick(map)">
+      <td [class]="colorClass(map, true)">{{map.name}}</td>
+      <td [class]="colorClass(map, false)">{{map.tier}}</td>
+      <td>
+        <div class="text-center" (click)="onTdClick(map, 'c');$event.stopPropagation()">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="map.c"/>
+        </div>
+      </td>
+      <td>
+        <div class="text-center" *ngIf="map.isOnAtlas" (click)="onTdClick(map, 'b');$event.stopPropagation()">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="map.b"/>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
