@@ -71,18 +71,29 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "development": {
+              "index": "src/index.html",
+              "optimization": {
+                "scripts": false,
+                "styles": {
+                  "minify": false,
+                  "inlineCritical": false
+                }
+              },
+              "outputHashing": "none",
+              "sourceMap": true,
+              "namedChunks": false,
+              "extractLicenses": false,
+              "vendorChunk": false,
+              "buildOptimizer": false
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "poe-checklist-ng:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "poe-checklist-ng:build:production"
-            }
+            "browserTarget": "poe-checklist-ng:build:development"
           }
         },
         "extract-i18n": {
