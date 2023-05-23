@@ -52,7 +52,7 @@
   </tr>
   </thead>
   <tbody>
-  <ng-container *ngFor="let map of model">
+  <ng-container *ngFor="let map of model; trackBy: track">
     <ng-container *ngIf="isVisible(map)">
       <tr [class]="colorClass(map)" (click)="onRowClick(map)">
         <td [class]="colorClass(map, true)">{{map.name}}</td>

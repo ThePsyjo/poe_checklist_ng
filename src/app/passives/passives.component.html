@@ -41,7 +41,7 @@
   </tr>
   </thead>
   <tbody>
-  <ng-container *ngFor="let row of model">
+  <ng-container *ngFor="let row of model; trackBy: track">
     <ng-container *ngIf="isVisible(row)">
       <tr (click)="onRowClick(row)">
         <td [class.text-secondary]="row.checked">{{row.act}}</td>

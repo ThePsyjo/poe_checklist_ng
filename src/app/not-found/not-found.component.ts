@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit, Optional} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Inject, OnInit, Optional} from '@angular/core';
 import {RESPONSE} from "@nguniversal/express-engine/tokens";
 import {Response} from "express";
 
@@ -6,7 +6,8 @@ import {Response} from "express";
     selector: 'app-not-found',
     templateUrl: './not-found.component.html',
     styleUrls: ['./not-found.component.css'],
-    standalone: true
+    standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotFoundComponent implements OnInit {
 

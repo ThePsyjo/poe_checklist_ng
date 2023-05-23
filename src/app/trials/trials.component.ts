@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { Sort, MatSortModule } from "@angular/material/sort";
 import TRIALS from "./TRIALS";
 import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
@@ -6,7 +6,7 @@ import {compare} from "../common";
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 
-export interface Trial extends Record<string, any> {
+interface Trial extends Record<string, any> {
   id: number;
   act: string;
   zone: string;
@@ -16,7 +16,7 @@ export interface Trial extends Record<string, any> {
   checked: boolean;
 }
 
-export interface Filters extends FiltersBase {
+interface Filters extends FiltersBase {
   trials: Record<string, FilterItem>;
 }
 
@@ -25,6 +25,7 @@ export interface Filters extends FiltersBase {
     templateUrl: './trials.component.html',
     styleUrls: ['./trials.component.css'],
     standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule]
 })
 export class TrialsComponent implements OnInit {
@@ -104,6 +105,10 @@ export class TrialsComponent implements OnInit {
       || (trial.difficulty == 'Merciless' && this.filters.trials.merciless.state)
       || (trial.difficulty == 'Eternal' && this.filters.trials.eternal.state)
     )
+  }
+
+  track(index: number, item: Trial) {
+    return item.id;
   }
 
   saveModel() {

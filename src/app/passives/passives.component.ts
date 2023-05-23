@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
 import { Sort, MatSortModule } from "@angular/material/sort";
 import {compare} from "../common";
@@ -6,7 +6,7 @@ import PASSIVES, {wikiLink} from "./PASSIVES"
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 
-export interface Quest extends Record<string, any> {
+interface Quest extends Record<string, any> {
   id: number;
   name: string;
   objective: string;
@@ -15,7 +15,7 @@ export interface Quest extends Record<string, any> {
   checked: boolean;
 }
 
-export interface Filters extends FiltersBase {
+interface Filters extends FiltersBase {
   quests: Record<string, FilterItem>;
 }
 
@@ -24,6 +24,7 @@ export interface Filters extends FiltersBase {
     templateUrl: './passives.component.html',
     styleUrls: ['./passives.component.css'],
     standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule]
 })
 export class PassivesComponent implements OnInit {
@@ -106,6 +107,10 @@ export class PassivesComponent implements OnInit {
   isVisible(quest: Quest) {
     // search
     return !(quest.checked && this.filters.quests.hide.state)
+  }
+
+  track(index: number, item: Quest) {
+    return item.id;
   }
 
   get filter_order(): Record<string, any>[] {

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {NgIf} from '@angular/common';
 import {RouterLink, RouterOutlet} from '@angular/router';
 
@@ -7,6 +7,7 @@ import {RouterLink, RouterOutlet} from '@angular/router';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterLink, NgIf, RouterOutlet]
 })
 export class AppComponent {

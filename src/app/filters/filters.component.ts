@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgIf, NgTemplateOutlet, NgFor } from '@angular/common';
 
@@ -17,11 +17,11 @@ export interface FiltersBase extends Record<string, Record<string, FilterItem>> 
   misc: Record<string, FilterItem>;
 }
 
-export interface StoreFilterItem extends Record<string, any> {
+interface StoreFilterItem extends Record<string, any> {
   state: boolean;
 }
 
-export interface StoreFilters extends Record<string, Record<string, StoreFilterItem>> {
+interface StoreFilters extends Record<string, Record<string, StoreFilterItem>> {
   misc: Record<string, StoreFilterItem>;
 }
 
@@ -30,6 +30,7 @@ export interface StoreFilters extends Record<string, Record<string, StoreFilterI
     templateUrl: './filters.component.html',
     styleUrls: ['./filters.component.css'],
     standalone: true,
+    changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [NgIf, NgTemplateOutlet, NgFor, FormsModule]
 })
 export class FiltersComponent implements OnInit {

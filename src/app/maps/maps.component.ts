@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import MAPS from './MAPS';
 import { Sort, MatSortModule } from '@angular/material/sort';
 import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
@@ -6,7 +6,7 @@ import {compare} from "../common";
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf, DecimalPipe } from '@angular/common';
 
-export interface MapObject extends Record<string, any> {
+interface MapObject extends Record<string, any> {
   id: string;
   name: string;
   tier?: number;
@@ -16,7 +16,7 @@ export interface MapObject extends Record<string, any> {
   b: boolean;
 }
 
-export interface Filters extends FiltersBase {
+interface Filters extends FiltersBase {
   show_checked: Record<string, FilterItem>;
   hide_checked: Record<string, FilterItem>;
   hide_misc: Record<string, FilterItem>;
@@ -27,7 +27,8 @@ export interface Filters extends FiltersBase {
     templateUrl: './maps.component.html',
     styleUrls: ['./maps.component.css'],
     standalone: true,
-    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule, DecimalPipe]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule, DecimalPipe],
 })
 export class MapsComponent implements OnInit {
   model: MapObject[] = [];
@@ -76,7 +77,7 @@ export class MapsComponent implements OnInit {
     // console.log(localStorage.map_checked)
     // console.log(checked)
     this.model = MAPS.list.map(function (_map): MapObject {
-      let id = _map.name.toLowerCase().replace(/[ -']/gi, '_')
+      const id = _map.name.toLowerCase().replace(/[ -']/gi, '_')
       return {
         id: id,
         c: checked[id]?.c ?? false,
@@ -124,7 +125,7 @@ export class MapsComponent implements OnInit {
   }
 
   isVisible(map: MapObject) {
-    let search = this.filters.misc.search.state as string
+    const search = this.filters.misc.search.state as string
     if (search) {
       for (const k of search.toLowerCase().split(' ')) {
         if (k.startsWith('tier:') || Number(k)) {
@@ -156,6 +157,10 @@ export class MapsComponent implements OnInit {
       if (map.isUnique && name) return 'text-unique'
       else return null
     }
+  }
+
+  track(index: number, map: MapObject) {
+    return map.id;
   }
 
   get filter_order(): Record<string, any>[] {
