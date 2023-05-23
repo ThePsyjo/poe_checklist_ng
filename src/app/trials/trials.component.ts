@@ -1,10 +1,10 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import { Sort, MatSortModule } from "@angular/material/sort";
+import {MatSortModule, Sort} from "@angular/material/sort";
 import TRIALS from "./TRIALS";
-import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
+import {FilterItem, FilterItemType, FiltersBase, FiltersComponent} from "../filters/filters.component";
 import {compare} from "../common";
-import { FormsModule } from '@angular/forms';
-import { NgFor, NgIf } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {NgFor, NgIf} from '@angular/common';
 
 interface Trial extends Record<string, any> {
   id: number;

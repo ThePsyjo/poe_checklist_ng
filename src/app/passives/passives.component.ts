@@ -1,10 +1,10 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
-import { Sort, MatSortModule } from "@angular/material/sort";
+import {FilterItem, FilterItemType, FiltersBase, FiltersComponent} from "../filters/filters.component";
+import {MatSortModule, Sort} from "@angular/material/sort";
 import {compare} from "../common";
 import PASSIVES, {wikiLink} from "./PASSIVES"
-import { FormsModule } from '@angular/forms';
-import { NgFor, NgIf } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {NgFor, NgIf} from '@angular/common';
 
 interface Quest extends Record<string, any> {
   id: number;

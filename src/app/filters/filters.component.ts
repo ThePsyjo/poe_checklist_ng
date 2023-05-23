@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NgIf, NgTemplateOutlet, NgFor } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {NgFor, NgIf, NgTemplateOutlet} from '@angular/common';
 
 export enum FilterItemType {
   Checkbox,

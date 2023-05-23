@@ -1,10 +1,10 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import MAPS from './MAPS';
-import { Sort, MatSortModule } from '@angular/material/sort';
-import { FilterItem, FilterItemType, FiltersBase, FiltersComponent } from "../filters/filters.component";
+import {MatSortModule, Sort} from '@angular/material/sort';
+import {FilterItem, FilterItemType, FiltersBase, FiltersComponent} from "../filters/filters.component";
 import {compare} from "../common";
-import { FormsModule } from '@angular/forms';
-import { NgFor, NgIf, DecimalPipe } from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {DecimalPipe, NgFor, NgIf} from '@angular/common';
 
 interface MapObject extends Record<string, any> {
   id: string;
