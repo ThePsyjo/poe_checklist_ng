@@ -19,24 +19,27 @@
   <div class="d-flex flex-wrap justify-content-end">
 
     <div *ngFor="let group of filterOrder" [class.border]="isBordered" [class.border-secondary]="isBordered"
-         class="flex-column px-2 mx-1 mb-2">
-      <div *ngFor="let k of group.keys">
-        <ng-container *ngIf="filters[group.name][k].type == 0">
+         class="flex-column px-3 px-sm-2 mx-1 mb-2">
+      <ng-container *ngFor="let k of group.keys">
+        <div *ngIf="filters[group.name][k].type == 0">
           <input id="filter-input-{{k}}"
-                 class="form-check-input align-middle m-1"
+                 class="form-check-input  my-2 my-sm-1 me-2 me-sm-1"
                  type="checkbox"
                  [(ngModel)]="filters[group.name][k].state"
                  (ngModelChange)="saveFilters()">
-          <label id="filter-label-{{k}}" class="form-check-label align-middle m-0" for="filter-input-{{k}}">{{filters[group.name][k].name}}</label>
-        </ng-container>
-        <div *ngIf="filters[group.name][k].type == 1">{{filters[group.name][k].name}}</div>
-      </div>
+          <label id="filter-label-{{k}}"
+                 class="form-check-label  my-2 my-sm-1"
+                 for="filter-input-{{k}}">{{filters[group.name][k].name}}
+          </label>
+        </div>
+        <div *ngIf="filters[group.name][k].type == 1" class="my-2 my-sm-1">{{filters[group.name][k].name}}</div>
+      </ng-container>
     </div>
 
   </div>
 
   <form *ngIf="isSearch">
-    <div class="input-group">
+    <div class="input-group mt-2 mt-sm-0">
       <input id="search-input"
              name="search-input"
              type="text"
