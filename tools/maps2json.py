@@ -54,7 +54,12 @@ with open('maps') as _in, open('MAPS_non_atlas.json') as _tpl, open('unique.json
 
         update(tpl, line, tier)
 
-    tpl['list'].extend(json.load(_unique))
+    def _del_base(obj):
+        if 'base' in obj:
+            del obj['base']
+        return obj
+
+    tpl['list'].extend([_del_base(map_object) for map_object in json.load(_unique)])
 
 with open('out.json', 'w') as _out:
     json.dump(fp=_out, obj=tpl, indent=2)

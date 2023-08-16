@@ -1,112 +1,131 @@
 [
   {
     "name": "The Coward's Trial",
+    "base": "Cursed Crypt",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 7
   },
   {
     "name": "Whakawairua Tuahu",
+    "base": "Strand",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 3
   },
   {
     "name": "Doryani's Machinarium",
+    "base": "Maze",
     "isUnique": true,
     "isOnAtlas": false,
     "tier": 14
   },
   {
     "name": "Maelström of Chaos",
+    "base": "Atoll",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 5
   },
   {
     "name": "Oba's Cursed Trove",
+    "base": "Underground Sea",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 10
   },
   {
     "name": "Acton's Nightmare",
+    "base": "Overgrown Shrine",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 3
   },
   {
     "name": "Death and Taxes",
+    "base": "Necropolis",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 12
   },
   {
     "name": "Olmec's Sanctum",
+    "base": "Bone Crypt",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 1
   },
   {
     "name": "Mao Kun",
+    "base": "Shore",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 6
   },
   {
     "name": "Hallowed Ground",
+    "base": "Cemetery",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 4
   },
   {
     "name": "Pillars of Arun",
+    "base": "Dunes",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 2
   },
   {
     "name": "Caer Blaidd, Wolfpack's Den",
+    "base": "Underground River",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 15
   },
   {
     "name": "Vaults of Atziri",
+    "base": "Vaal Pyramid",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 4
   },
   {
     "name": "Poorjoy's Asylum",
+    "base": "Temple",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 14
   },
   {
     "name": "The Putrid Cloister",
+    "base": "Museum",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 12
   },
   {
     "name": "The Twilight Temple",
+    "base": "Moon Temple",
     "isUnique": true,
     "isOnAtlas": true,
     "tier": 4
   },
   {
     "name": "The Vinktar Square",
+    "base": "Courtyard",
     "isUnique": true,
     "isOnAtlas": false
   },
   {
     "name": "Hall of Grandmasters",
+    "base": "Promenade",
     "isUnique": true,
     "isOnAtlas": false
   },
   {
     "name": "Untainted Paradise",
+    "base": "Tropical Island",
     "isUnique": true,
     "isOnAtlas": false
   },
