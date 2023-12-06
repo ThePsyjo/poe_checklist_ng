@@ -93,13 +93,13 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "poe-checklist-ng:build:development"
+            "buildTarget": "poe-checklist-ng:build:development"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "poe-checklist-ng:build"
+            "buildTarget": "poe-checklist-ng:build"
           }
         },
         "test": {
@@ -154,7 +154,7 @@
           }
         },
         "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
+          "builder": "@angular-devkit/build-angular:ssr-dev-server",
           "options": {
             "browserTarget": "poe-checklist-ng:build",
             "serverTarget": "poe-checklist-ng:server"
@@ -167,7 +167,7 @@
           }
         },
         "prerender": {
-          "builder": "@nguniversal/builders:prerender",
+          "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "poe-checklist-ng:build:production",
             "serverTarget": "poe-checklist-ng:server:production",
