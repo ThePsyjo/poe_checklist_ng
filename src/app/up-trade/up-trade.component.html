@@ -1,0 +1,33 @@
+<div class="p-2">
+  <h2>Up-Trade</h2>
+</div>
+
+<div>
+  Use this tool to determine the combinations of items to up-trade. Most likely you will use this with maps. Put the
+  same items in your inventory, set the amount you have in the number selector <code>Count</code> below and try to sell
+  the items in the displayed combination to retrieve the item you are looking for.
+</div>
+
+<div class="mt-3 ">
+  Count: <input id="count-input" type="number" value="4" min="3" max="10" [(ngModel)]="value" (wheel)="wheelSpun">
+</div>
+
+<div class="mt-2 mx-2">
+  <table class="table text-primary table-hover border-secondary">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Combination</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (row of getCombinations();track row.number) {
+        <tr>
+          <td>{{ row.number }}</td>
+          <td>{{ row.combination }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+</div>

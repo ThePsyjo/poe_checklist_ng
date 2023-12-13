@@ -58,6 +58,13 @@ input[type=text]{
   border-color: map-get($theme-colors, primary);
   box-shadow: none;
 }
+input[type=number]{
+  outline: none;
+  background-color: initial;
+  color: map-get($theme-colors, primary);
+  border-color: map-get($theme-colors, primary);
+  box-shadow: none;
+}
 a{color: map-get($theme-colors, primary);}
 a:hover{color: map-get($theme-colors, primary_highlight);}
 //input[type=checkbox]:checked:after{
