@@ -1,5 +1,5 @@
 export default {
-  "version": 3.23,
+  "version": 3.24,
   "list": [
     {
       "name": "Esh's Breachstone",
@@ -138,19 +138,19 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Pier",
+      "name": "Crimson Township",
       "tier": 1,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Flooded Mine",
+      "name": "Shipyard",
       "tier": 1,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Glacier",
+      "name": "Desert Spring",
       "tier": 1,
       "isUnique": false,
       "isOnAtlas": true
@@ -162,43 +162,43 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Infested Valley",
+      "name": "Iceberg",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Port",
+      "name": "Pier",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Forking River",
+      "name": "Arsenal",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Laboratory",
+      "name": "Belfry",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Fields",
+      "name": "Arcade",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Crimson Township",
+      "name": "Wharf",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Core",
+      "name": "Lair",
       "tier": 2,
       "isUnique": false,
       "isOnAtlas": true
@@ -216,37 +216,37 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Ancient City",
+      "name": "Volcano",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Estuary",
+      "name": "Crystal Ore",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Chateau",
+      "name": "Toxic Sewer",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Ramparts",
+      "name": "Mausoleum",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Conservatory",
+      "name": "Fungal Hollow",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Castle Ruins",
+      "name": "Channel",
       "tier": 3,
       "isUnique": false,
       "isOnAtlas": true
@@ -270,31 +270,31 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Lookout",
+      "name": "Canyon",
       "tier": 4,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Colonnade",
+      "name": "Fields",
       "tier": 4,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Precinct",
+      "name": "Foundry",
       "tier": 4,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Grotto",
+      "name": "Primordial Pool",
       "tier": 4,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Acid Caverns",
+      "name": "Cells",
       "tier": 4,
       "isUnique": false,
       "isOnAtlas": true
@@ -312,19 +312,13 @@ export default {
       "isOnAtlas": true
     },
     {
+      "name": "Graveyard",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
       "name": "Gardens",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Academy",
-      "tier": 5,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Dry Sea",
       "tier": 5,
       "isUnique": false,
       "isOnAtlas": true
@@ -336,13 +330,19 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Tropical Island",
+      "name": "Burial Chambers",
       "tier": 5,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Ashen Wood",
+      "name": "Cage",
+      "tier": 5,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Phantasmagoria",
       "tier": 5,
       "isUnique": false,
       "isOnAtlas": true
@@ -360,31 +360,31 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Waste Pool",
+      "name": "Dry Sea",
       "tier": 6,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Palace",
+      "name": "Arid Lake",
       "tier": 6,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Dark Forest",
+      "name": "Waterways",
       "tier": 6,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Crystal Ore",
+      "name": "Tower",
       "tier": 6,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Thicket",
+      "name": "Basilica",
       "tier": 6,
       "isUnique": false,
       "isOnAtlas": true
@@ -396,92 +396,80 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Relic Chambers",
+      "name": "Waste Pool",
       "tier": 7,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Plateau",
+      "name": "Silo",
       "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Caldera",
-      "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Dig",
-      "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Bog",
-      "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Frozen Cabins",
-      "tier": 7,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Arachnid Nest",
-      "tier": 8,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Wasteland",
-      "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
       "name": "Spider Forest",
+      "tier": 7,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Courthouse",
+      "tier": 7,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Dungeon",
+      "tier": 7,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Bramble Valley",
+      "tier": 7,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Orchard",
       "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Overgrown Ruin",
+      "name": "Jungle Valley",
       "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Grave Trough",
+      "name": "Lava Lake",
       "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Summit",
+      "name": "Sunken City",
       "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "City Square",
+      "name": "Reef",
       "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Foundry",
-      "tier": 9,
+      "name": "Frozen Cabins",
+      "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Sepulchre",
-      "tier": 9,
+      "name": "Ashen Wood",
+      "tier": 8,
       "isUnique": false,
       "isOnAtlas": true
     },
@@ -492,19 +480,31 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Spider Lair",
+      "name": "Lookout",
       "tier": 9,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Channel",
+      "name": "Tropical Island",
       "tier": 9,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Iceberg",
+      "name": "Stagnation",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Academy",
+      "tier": 9,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Glacier",
       "tier": 9,
       "isUnique": false,
       "isOnAtlas": true
@@ -516,67 +516,67 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Crater",
+      "name": "Pit",
       "tier": 10,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Arena",
+      "name": "Wasteland",
       "tier": 10,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Wharf",
+      "name": "Excavation",
       "tier": 10,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Carcass",
+      "name": "Arachnid Nest",
       "tier": 10,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Coves",
+      "name": "Grotto",
       "tier": 10,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Ghetto",
+      "name": "Acid Caverns",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Arcade",
+      "name": "Plaza",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Mineral Pools",
+      "name": "Residence",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Racecourse",
+      "name": "Sulphur Vents",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Burial Chambers",
+      "name": "Forking River",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Volcano",
+      "name": "Conservatory",
       "tier": 11,
       "isUnique": false,
       "isOnAtlas": true
@@ -594,55 +594,55 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Orchard",
+      "name": "Barrows",
       "tier": 12,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Colosseum",
+      "name": "Bog",
       "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Basilica",
-      "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Lava Chamber",
-      "tier": 12,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Mud Geyser",
-      "tier": 13,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Arid Lake",
-      "tier": 13,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
       "name": "Crimson Temple",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Palace",
+      "tier": 12,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Flooded Mine",
       "tier": 13,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Cage",
+      "name": "Mineral Pools",
       "tier": 13,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Canyon",
+      "name": "Terrace",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Grave Trough",
+      "tier": 13,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Shrine",
       "tier": 13,
       "isUnique": false,
       "isOnAtlas": true
@@ -660,19 +660,19 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Reef",
+      "name": "Forbidden Woods",
       "tier": 14,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Jungle Valley",
+      "name": "Estuary",
       "tier": 14,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Plaza",
+      "name": "Defiled Cathedral",
       "tier": 14,
       "isUnique": false,
       "isOnAtlas": true
@@ -684,7 +684,19 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Ivory Temple",
+      "name": "Cold River",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Arena",
+      "tier": 15,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Port",
       "tier": 15,
       "isUnique": false,
       "isOnAtlas": true
@@ -696,38 +708,56 @@ export default {
       "isOnAtlas": true
     },
     {
-      "name": "Mesa",
-      "tier": 15,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Bramble Valley",
-      "tier": 15,
-      "isUnique": false,
-      "isOnAtlas": true
-    },
-    {
-      "name": "Desert",
+      "name": "Plateau",
       "tier": 16,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Residence",
+      "name": "Lava Chamber",
       "tier": 16,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Bazaar",
+      "name": "Castle Ruins",
       "tier": 16,
       "isUnique": false,
       "isOnAtlas": true
     },
     {
-      "name": "Stagnation",
+      "name": "Thicket",
       "tier": 16,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Sanctuary",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Citadel",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Fortress",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Abomination",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": true
+    },
+    {
+      "name": "Ziggurat",
+      "tier": 17,
       "isUnique": false,
       "isOnAtlas": true
     },
