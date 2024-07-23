@@ -130,6 +130,36 @@
       "name": "Maven's Invitation: The Elderslayers",
       "isUnique": false,
       "isOnAtlas": false
+    },
+        {
+      "name": "Sanctuary",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Citadel",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Fortress",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Abomination",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": false
+    },
+    {
+      "name": "Ziggurat",
+      "tier": 17,
+      "isUnique": false,
+      "isOnAtlas": false
     }
   ]
 }
