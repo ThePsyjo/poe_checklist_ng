@@ -18,10 +18,6 @@ interface Combination extends Record<string, any> {
 export class UpTradeComponent {
   value = 4;  // default count
 
-  // has to be here to make wheel work
-  wheelSpun(event: Event): void {
-  }
-
   calcCombinations(array: any[], size: number) {
 
     function p(t: any[], i: number) {

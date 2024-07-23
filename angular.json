@@ -15,12 +15,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/poe-checklist-ng/browser",
+            "outputPath": {
+              "base": "dist/poe-checklist-ng"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "polyfills": [
+              "src/polyfills.ts"
+            ],
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
@@ -35,7 +38,13 @@
               "node_modules/jquery/dist/jquery.slim.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -57,8 +66,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -84,9 +91,7 @@
               "outputHashing": "none",
               "sourceMap": true,
               "namedChunks": false,
-              "extractLicenses": false,
-              "vendorChunk": false,
-              "buildOptimizer": false
+              "extractLicenses": false
             }
           }
         },
@@ -130,59 +135,11 @@
               "devServerTarget": "poe-checklist-ng:serve:production"
             }
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/poe-checklist-ng/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "sourceMap": false,
-              "optimization": true,
-              "buildOptimizer": true
-            }
-          }
-        },
-        "serve-ssr": {
-          "builder": "@angular-devkit/build-angular:ssr-dev-server",
-          "options": {
-            "browserTarget": "poe-checklist-ng:build",
-            "serverTarget": "poe-checklist-ng:server"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "poe-checklist-ng:build:production",
-              "serverTarget": "poe-checklist-ng:server:production"
-            }
-          }
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "browserTarget": "poe-checklist-ng:build:production",
-            "serverTarget": "poe-checklist-ng:server:production",
-            "routes": [
-              "/",
-              "/passives",
-              "/trials",
-              "/about"
-            ]
-          },
-          "configurations": {
-            "production": {}
-          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

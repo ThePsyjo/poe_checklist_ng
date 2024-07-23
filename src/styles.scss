@@ -21,6 +21,12 @@ body{
   //font-size:16px;
   //font-family:Montserrat,Open Sans,Verdana,sans-serif
 }
+.table-hover tbody tr td,
+.table-hover thead tr th
+{
+  color: inherit;
+  background-color: inherit;
+}
 .table-hover tbody tr:hover td
 {
   background-color: map-get($theme-colors, dark-trans-50);
