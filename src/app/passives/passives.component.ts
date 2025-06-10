@@ -4,7 +4,7 @@ import {MatSortModule, Sort} from "@angular/material/sort";
 import {compare} from "../common";
 import PASSIVES, {wikiLink} from "./PASSIVES"
 import {FormsModule} from '@angular/forms';
-import {NgFor, NgIf} from '@angular/common';
+
 
 interface Quest extends Record<string, any> {
   id: number;
@@ -23,9 +23,8 @@ interface Filters extends FiltersBase {
     selector: 'app-passives',
     templateUrl: './passives.component.html',
     styleUrls: ['./passives.component.css'],
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule]
+    imports: [FiltersComponent, MatSortModule, FormsModule]
 })
 export class PassivesComponent implements OnInit {
   model: Quest[] = []

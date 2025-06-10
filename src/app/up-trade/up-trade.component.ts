@@ -7,13 +7,12 @@ interface Combination extends Record<string, any> {
 }
 
 @Component({
-  selector: 'app-up-trade',
-  standalone: true,
-  imports: [
-    FormsModule
-  ],
-  templateUrl: './up-trade.component.html',
-  styleUrl: './up-trade.component.css'
+    selector: 'app-up-trade',
+    imports: [
+        FormsModule
+    ],
+    templateUrl: './up-trade.component.html',
+    styleUrl: './up-trade.component.css'
 })
 export class UpTradeComponent {
   value = 4;  // default count

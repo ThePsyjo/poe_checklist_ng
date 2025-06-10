@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {NgFor, NgIf, NgTemplateOutlet} from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 
 export enum FilterItemType {
   Checkbox,
@@ -29,9 +29,8 @@ interface StoreFilters extends Record<string, Record<string, StoreFilterItem>> {
     selector: 'app-filters',
     templateUrl: './filters.component.html',
     styleUrls: ['./filters.component.css'],
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgIf, NgTemplateOutlet, NgFor, FormsModule]
+    imports: [NgTemplateOutlet, FormsModule]
 })
 export class FiltersComponent implements OnInit {
   @Input() isCollapse: boolean = false;

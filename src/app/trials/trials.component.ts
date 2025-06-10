@@ -4,7 +4,7 @@ import TRIALS from "./TRIALS";
 import {FilterItem, FilterItemType, FiltersBase, FiltersComponent} from "../filters/filters.component";
 import {compare} from "../common";
 import {FormsModule} from '@angular/forms';
-import {NgFor, NgIf} from '@angular/common';
+
 
 interface Trial extends Record<string, any> {
   id: number;
@@ -24,9 +24,8 @@ interface Filters extends FiltersBase {
     selector: 'app-trials',
     templateUrl: './trials.component.html',
     styleUrls: ['./trials.component.css'],
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule]
+    imports: [FiltersComponent, MatSortModule, FormsModule]
 })
 export class TrialsComponent implements OnInit {
   model: Trial[] = []

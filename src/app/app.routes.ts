@@ -1,7 +1,6 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', loadComponent: () => import('./maps/maps.component').then(c => c.MapsComponent)},
   {path: 'passives', loadComponent: () => import('./passives/passives.component').then(c => c.PassivesComponent)},
   {path: 'trials', loadComponent: () => import('./trials/trials.component').then(c => c.TrialsComponent)},
@@ -10,12 +9,3 @@ const routes: Routes = [
   {path: '404', loadComponent: () => import('./not-found/not-found.component').then(c => c.NotFoundComponent)},
   {path: '**', redirectTo: '/404'},
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking',
-//    useHash: true,
-})],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

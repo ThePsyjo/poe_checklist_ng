@@ -7,7 +7,7 @@
   [isBordered]="false"
   [filterOrder]="filter_order"
   [filters]="filters"
->
+  >
 </app-filters>
 
 <div class="modal fade" id="clearAll" tabindex="-1" role="dialog" aria-labelledby="clearAllModal" aria-hidden="true">
@@ -28,32 +28,34 @@
 </div>
 
 <table matSort (matSortChange)="sortData($event)" matSortActive="act"
-       class="table text-primary table-hover border-secondary">
+  class="table text-primary table-hover border-secondary">
   <thead>
-  <tr>
-    <th id="passives-sort-act" mat-sort-header="act" scope="col">Act</th>
-    <th id="passives-sort-name" mat-sort-header="name" scope="col">Quest</th>
-    <th id="passives-sort-obj" mat-sort-header="objective" scope="col">Objective</th>
-    <th class="text-center" scope="col">
-      <button id="passives-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
-              data-bs-target="#clearAll"></button>
-    </th>
-  </tr>
+    <tr>
+      <th id="passives-sort-act" mat-sort-header="act" scope="col">Act</th>
+      <th id="passives-sort-name" mat-sort-header="name" scope="col">Quest</th>
+      <th id="passives-sort-obj" mat-sort-header="objective" scope="col">Objective</th>
+      <th class="text-center" scope="col">
+        <button id="passives-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
+        data-bs-target="#clearAll"></button>
+      </th>
+    </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of filterVisible(model); trackBy: track" (click)="onRowClick(row)">
-      <td [class.text-secondary]="row.checked">{{row.act}}</td>
-      <td>
-        <a [class.text-secondary]="row.checked" (click)="$event.stopPropagation()" href="{{questLink(row)}}" target="_blank">
-          {{row.name}}
-        </a>
-      </td>
-      <td [class.text-secondary]="row.checked">{{row.objective}}</td>
-      <td>
-        <div class="text-center">
-          <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked" (ngModelChange)="saveModel()"/>
-        </div>
-      </td>
-    </tr>
+    @for (row of filterVisible(model); track track($index, row)) {
+      <tr (click)="onRowClick(row)">
+        <td [class.text-secondary]="row.checked">{{row.act}}</td>
+        <td>
+          <a [class.text-secondary]="row.checked" (click)="$event.stopPropagation()" href="{{questLink(row)}}" target="_blank">
+            {{row.name}}
+          </a>
+        </td>
+        <td [class.text-secondary]="row.checked">{{row.objective}}</td>
+        <td>
+          <div class="text-center">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked" (ngModelChange)="saveModel()"/>
+          </div>
+        </td>
+      </tr>
+    }
   </tbody>
 </table>

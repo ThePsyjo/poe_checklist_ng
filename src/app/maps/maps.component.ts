@@ -4,7 +4,7 @@ import {MatSortModule, Sort} from '@angular/material/sort';
 import {FilterItem, FilterItemType, FiltersBase, FiltersComponent} from "../filters/filters.component";
 import {compare} from "../common";
 import {FormsModule} from '@angular/forms';
-import {DecimalPipe, NgFor, NgIf} from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 
 interface MapObject extends Record<string, any> {
   id: string;
@@ -26,9 +26,8 @@ interface Filters extends FiltersBase {
     selector: 'maps',
     templateUrl: './maps.component.html',
     styleUrls: ['./maps.component.css'],
-    standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FiltersComponent, MatSortModule, NgFor, NgIf, FormsModule, DecimalPipe],
+    imports: [FiltersComponent, MatSortModule, FormsModule, DecimalPipe]
 })
 export class MapsComponent implements OnInit {
   model: MapObject[] = [];

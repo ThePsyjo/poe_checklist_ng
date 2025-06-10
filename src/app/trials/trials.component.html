@@ -7,7 +7,7 @@
   [isBordered]="false"
   [filterOrder]="filter_order"
   [filters]="filters"
->
+  >
 </app-filters>
 
 <div class="modal fade" id="clearAll" tabindex="-1" role="dialog" aria-labelledby="clearAllModal" aria-hidden="true">
@@ -28,28 +28,30 @@
 </div>
 
 <table matSort (matSortChange)="sortData($event)" matSortActive="act"
-       class="table text-primary table-hover border-secondary">
+  class="table text-primary table-hover border-secondary">
   <thead>
-  <tr>
-    <th id="trials-sort-act" mat-sort-header="act" scope="col">Act</th>
-    <th id="trials-sort-zone" mat-sort-header="zone" scope="col">Zone</th>
-    <th id="trials-sort-diff" mat-sort-header="difficulty" scope="col">Difficulty</th>
-    <th class="text-center" scope="col">
-      <button id="trials-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
-              data-bs-target="#clearAll"></button>
-    </th>
-  </tr>
+    <tr>
+      <th id="trials-sort-act" mat-sort-header="act" scope="col">Act</th>
+      <th id="trials-sort-zone" mat-sort-header="zone" scope="col">Zone</th>
+      <th id="trials-sort-diff" mat-sort-header="difficulty" scope="col">Difficulty</th>
+      <th class="text-center" scope="col">
+        <button id="trials-reset" type="button" class="btn-close btn-close-white" aria-label="Clear" data-bs-toggle="modal"
+        data-bs-target="#clearAll"></button>
+      </th>
+    </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of filterVisible(model); trackBy: track" (click)="onRowClick(row)">
-      <td [class.text-secondary]="row.checked">{{row.act}}</td>
-      <td [class.text-secondary]="row.checked">{{row.zone}}</td>
-      <td [class.text-secondary]="row.checked">{{row.difficulty}}</td>
-      <td>
-        <div class="text-center">
-          <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked"/>
-        </div>
-      </td>
-    </tr>
+    @for (row of filterVisible(model); track track($index, row)) {
+      <tr (click)="onRowClick(row)">
+        <td [class.text-secondary]="row.checked">{{row.act}}</td>
+        <td [class.text-secondary]="row.checked">{{row.zone}}</td>
+        <td [class.text-secondary]="row.checked">{{row.difficulty}}</td>
+        <td>
+          <div class="text-center">
+            <input class="form-check-input" type="checkbox" [(ngModel)]="row.checked"/>
+          </div>
+        </td>
+      </tr>
+    }
   </tbody>
 </table>
